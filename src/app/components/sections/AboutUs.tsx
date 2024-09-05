@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/About.module.scss'
+import styles from '@/app/styles/About.module.scss'
 import AboutCard from "@/app/components/cards/AboutCard";
 
 interface Props {
@@ -8,7 +8,6 @@ interface Props {
 }
 
 const AboutUs : React.FC = () => {
-
 
     return (
         <section>

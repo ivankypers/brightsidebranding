@@ -1,0 +1,10 @@
+.model {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 100vh;
+  transform: scale(2.7);
+  z-index: -1;
+  pointer-events: none;
+}

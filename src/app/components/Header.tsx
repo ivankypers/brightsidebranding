@@ -1,11 +1,15 @@
+"use client"
+
 import React from "react";
+import ActionButton from "@/app/components/ActionButton";
+import styles from '@/app/styles/Header.module.css'
 
 const Header : React.FC = () => {
 
     return (
-        <header className="header">
+        <header className={styles.header}>
             <div className="container">
-                <div className="header__logo">
+                <div className={styles.logo}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="35" viewBox="0 0 26 35"
                          fill="none">
                         <path
@@ -17,7 +21,7 @@ const Header : React.FC = () => {
                     </div>
                 </div>
                 <nav>
-                    <ul className="header__list">
+                    <ul className={styles.list}>
                         <li>
                             <a href="#">О нас</a>
                         </li>
@@ -35,15 +39,7 @@ const Header : React.FC = () => {
                         </li>
                     </ul>
                 </nav>
-                <button className="main__button">
-                    Связаться с нами
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
-                         fill="none">
-                        <path
-                            d="M14.5 0.999999C14.5 0.723858 14.2761 0.5 14 0.499999L9.5 0.5C9.22386 0.5 9 0.723857 9 1C9 1.27614 9.22386 1.5 9.5 1.5L13.5 1.5L13.5 5.5C13.5 5.77614 13.7239 6 14 6C14.2761 6 14.5 5.77614 14.5 5.5L14.5 0.999999ZM1.35355 14.3536L14.3536 1.35355L13.6464 0.646446L0.646447 13.6464L1.35355 14.3536Z"
-                            fill="white"/>
-                    </svg>
-                </button>
+                <ActionButton text="Связаться с нами" onClick={() => alert('Похуй')} />
             </div>
         </header>
     )

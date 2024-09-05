@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import styles from '../styles/Main.module.scss'
+import styles from '@/app/styles/Main.module.scss'
 import ActionButton from "@/app/components/ActionButton";
 
 const Main : React.FC = () => {
