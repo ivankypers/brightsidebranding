@@ -1,0 +1,121 @@
+.section {
+  background-color: white;
+  padding-top: 138px;
+}
+
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 181px;
+}
+
+.title {
+  max-width: 1144px;
+  color: #000;
+  font-family: "Gothic №60", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cardWrap {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 140px;
+}
+
+.card {
+  display: flex;
+  width: 320px;
+  height: 420px;
+  padding: 30px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: linear-gradient(180deg, #ECECEC 0%, #FFF 100%);
+}
+
+.cardTitle {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  span {
+    color: #FF672D;
+  }
+}
+
+.cardDsc {
+  color: rgba(0, 0, 0, 0.50);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cardSubtitle {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 800px;
+
+}
+
+.offerTitle {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.offerDsc {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cardImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.hand {
+  position: absolute;
+  right: 100px;
+  bottom: -1000px;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.actionButton {
+  border-radius: 100px;
+  background: #FF672D;
+}

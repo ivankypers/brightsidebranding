@@ -6,11 +6,12 @@ import styles from '../styles/ActionButton.module.scss'
 interface ButtonProps {
     text: string;
     onClick: () => void;
+    className?: string;
 }
 
-const ActionButton :React.FC<ButtonProps> = ({text, onClick}) => {
+const ActionButton :React.FC<ButtonProps> = ({text, onClick, className}) => {
     return (
-    <button className={styles.actionButton} onClick={onClick}>
+    <button className={`${styles.actionButton} ${className}`} onClick={onClick}>
         {text}
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
              fill="none">
