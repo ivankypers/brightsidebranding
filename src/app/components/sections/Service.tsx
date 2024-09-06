@@ -37,14 +37,14 @@ const Stages: React.FC = () => {
                             price="40 000"
                             deadline="40"
                             description="Описание для многостраничных сайтов"
-                            imageUrl="/multisite.png"
+                            imageUrl="/landing.png"
                         />
                         <ServicePopup
-                            title="МНОГОСТРАНИЧНЫЕ САЙТЫ"
-                            price="40 000"
+                            title="ИНТЕРНЕТ-МАГАЗИНЫ"
+                            price="80 000"
                             deadline="40"
                             description="Описание для многостраничных сайтов"
-                            imageUrl="/multisite.png"
+                            imageUrl="/landing.png"
                         />
 
                     </div>
