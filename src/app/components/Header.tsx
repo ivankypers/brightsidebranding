@@ -2,7 +2,7 @@
 
 import React from "react";
 import ActionButton from "@/app/components/ActionButton";
-import styles from '@/app/styles/Header.module.css'
+import styles from '@/app/styles/Header.module.scss'
 
 const Header : React.FC = () => {
 

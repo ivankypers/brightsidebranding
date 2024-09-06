@@ -1,26 +1,30 @@
 import React from 'react';
 import styles from '@/app/styles/Service.module.scss'
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from "@/redux/store";
+import {selectService} from '@/redux/slices/serviceSlice';
 
-
-interface popupProps {
-    title?: string;
-
+interface ServicePopupProps {
+    className?: string;
+    title: string;
+    price: string;
+    deadline: string;
+    description: string;
+    imageUrl: string;
 }
 
-const ServicePopup: React.FC<popupProps> = ({title, }) => {
+const ServicePopup: React.FC<ServicePopupProps> = ({className, title, price, deadline, description, imageUrl}) => {
+    const dispatch = useDispatch();
+    const selectedService = useSelector((state: RootState) => state.service);
+    const handleClick = () => {
+        dispatch(selectService({ title, price, deadline, description, imageUrl }));
+    };
+
+    const isActive = selectedService.title === title;
 
     return (
-        <div className={styles.item}>
+        <div onClick={handleClick} className={`${styles.item} ${isActive ? styles.active : ''} ${className || ''}`}>
             <h2 className={styles.serviceTitle}>{title}</h2>
-            <div className={styles.details}>
-                ПОКАЗАТЬ ДЕТАЛИ
-                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="15.5" cy="15.5" r="15" stroke="white"/>
-                    <path d="M15.5 9.9585V21.0418M9.95831 15.5002H21.0416" stroke="white" strokeWidth="2"
-                          strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-
-            </div>
         </div>
     )
 }

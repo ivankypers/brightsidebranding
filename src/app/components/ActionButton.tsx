@@ -12,7 +12,7 @@ interface ButtonProps {
 const ActionButton :React.FC<ButtonProps> = ({text, onClick, className}) => {
     return (
     <button className={`${styles.actionButton} ${className}`} onClick={onClick}>
-        {text}
+        <span>{text}</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
              fill="none">
             <path

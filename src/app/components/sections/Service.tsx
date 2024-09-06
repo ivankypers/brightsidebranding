@@ -6,9 +6,15 @@ import styles from '@/app/styles/Service.module.scss'
 import ActionButton from "@/app/components/ActionButton";
 import Image from "next/image";
 import RequestInput from "@/app/components/RequestInput";
+import ServiceStage from "@/app/components/ServiceStage";
+import {useSelector} from "react-redux";
+import {RootState} from "@/redux/store";
 
 
 const Stages: React.FC = () => {
+    const selectedService = useSelector((state: RootState) => state.service);
+
+    console.log(selectedService)
 
     return (
         <section className="pt-[128px]" >
@@ -17,17 +23,44 @@ const Stages: React.FC = () => {
                     <h4>[УСЛУГИ]</h4>
                     <p>6+ НАПРАВЛЕНИЙ</p>
                 </div>
-                <div className={styles.serviceWrap}>
-                    <ServicePopup title="ЛЕНДИНГИ" />
-                    <ServicePopup title="МНОГОСТРАНИЧНЫЕ САЙТЫ" />
-                    <ServicePopup title="ИНТЕРНЕТ МАГАЗИНЫ" />
-                    <ServicePopup title="ФИРМЕННЫЙ СТИЛЬ" />
-                    <ServicePopup title="ДИЗАЙН ПРЕЗЕНТАЦИЙ" />
-                    <ServicePopup title="УПАКОВКА СОЦ. СЕТЕЙ" />
+                <div className={styles.preview}>
+                    <div className={styles.serviceWrap}>
+                        <ServicePopup
+                            title="ЛЕНДИНГИ"
+                            price="30 000"
+                            deadline="30"
+                            description="Описание для лендингов"
+                            imageUrl="/landing.png"
+                        />
+                        <ServicePopup
+                            title="МНОГОСТРАНИЧНЫЕ САЙТЫ"
+                            price="40 000"
+                            deadline="40"
+                            description="Описание для многостраничных сайтов"
+                            imageUrl="/multisite.png"
+                        />
+                        <ServicePopup
+                            title="МНОГОСТРАНИЧНЫЕ САЙТЫ"
+                            price="40 000"
+                            deadline="40"
+                            description="Описание для многостраничных сайтов"
+                            imageUrl="/multisite.png"
+                        />
+
+                    </div>
+                    <div className={styles.stageWrap}>
+                        {selectedService.title && (
+                            <ServiceStage
+                                title={selectedService.title}
+                                price={selectedService.price}
+                                deadline={selectedService.deadline}
+                                description={selectedService.description}
+                                imageUrl={selectedService.imageUrl}
+                            />
+                        )}
+                    </div>
                 </div>
-                <div className="flex justify-end mb-[120px]">
-                    <ActionButton className={styles.button} text="Обсудить проект" onClick={() => {}} />
-                </div>
+
                 <div>
                     <div className={styles.banner}>
                         <h2 className={styles.actionTitle}>
