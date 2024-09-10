@@ -1,4 +1,6 @@
 import styles from "@/app/styles/Projects.module.scss";
+import Image from "next/image";
+import React from "react";
 
 interface CardProps {
     title: string;
@@ -11,7 +13,7 @@ const ProjectCard: React.FC<CardProps> = ({title, type,stack,imgUrl}) => {
 
     return (
         <div className={styles.cardWrap}>
-            <img src={imgUrl} className={styles.img}  alt={title}/>
+            <Image src={imgUrl} className={styles.img}  alt={title} width={765} height={621} />
             <div className={styles.dsc}>
                 <div className={styles.col}>
                     <span>{title}</span>

@@ -1,3 +1,5 @@
+"use client"
+
 import aboutStyles from "@/app/styles/About.module.scss";
 import styles from "@/app/styles/Projects.module.scss";
 import React from "react";
@@ -19,9 +21,9 @@ const ProjectsSection : React.FC = () => {
                 </div>
                 <div className={styles.projectsWrap}>
                     <ProjectCard title="DEADCODE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/DEADCODE.png'} />
-                    <ProjectCard title="DEADCODE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/bsproj.png'} />
-                    <ProjectCard title="DEADCODE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/cqproj.png'} />
-                    <ProjectCard title="DEADCODE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/uproj.png'} />
+                    <ProjectCard title="BRIGHTSIDE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/bsproj.png'} />
+                    <ProjectCard title="CITIZEN QUEST" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/cqproj.png'} />
+                    <ProjectCard title="NEURO TRAFFIC" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/uproj.png'} />
                 </div>
             </div>
             <div className={styles.allprojects}>

@@ -89,3 +89,13 @@
   line-height: normal;
   text-transform: uppercase;
 }
+
+@media (max-width: 1281px) {
+  .actionWrap {
+    flex-direction: column;
+  }
+
+  .scrollTop {
+    align-self: flex-end;
+  }
+}

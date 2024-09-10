@@ -132,7 +132,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 37px 0px;
+  padding: 37px 0;
   color: #FFF;
   font-family: "Gothic №60", sans-serif;
   font-size: 32px;
@@ -150,5 +150,12 @@
 
   .serviceTitle {
     font-weight: 700;
+  }
+}
+
+@media (max-width: 1281px) {
+  .star {
+    width: 200px;
+    height: 200px;
   }
 }

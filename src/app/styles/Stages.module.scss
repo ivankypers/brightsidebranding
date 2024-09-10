@@ -119,3 +119,29 @@
   border-radius: 100px;
   background: #FF672D;
 }
+
+@media (max-width: 1281px) {
+  .cardWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    grid-row-gap: 16px;
+  }
+
+  .offer {
+    padding-bottom: 500px;
+  }
+
+  .hand {
+    bottom: -500px;
+  }
+
+  .title {
+    max-width: 768px;
+    font-size: 48px;
+
+    span {
+      font-size: 48px;
+    }
+  }
+}

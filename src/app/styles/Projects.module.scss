@@ -48,3 +48,11 @@
   font-weight: 400;
   line-height: 121.035%; /* 29.048px */
 }
+
+@media (max-width: 1281px) {
+
+  .img {
+    height: inherit;
+  }
+
+}

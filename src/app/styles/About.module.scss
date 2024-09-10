@@ -60,7 +60,7 @@
 
 .cardTitle {
   font-family: Inter, sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -69,7 +69,7 @@
 .cardDsc {
   color: rgba(255, 255, 255, 0.50);
   font-family: Inter, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -93,7 +93,7 @@
 }
 
 .bgFirst {
-  background-image: url("/cardbgwide.png");
+  background-image: url("/public/cardbgwide.png");
   background-position: center;
   .cardTitle {
     color: white;
@@ -105,7 +105,7 @@
 }
 
 .bgSecond {
-  background-image: url("/cardbgorange.png");
+  background-image: url("/public/cardbgorange.png");
   background-color: white;
   background-position: 180% 120%;
   background-size: 80%;
@@ -115,14 +115,14 @@
   }
 
   .cardDsc {
-    color: black;
+    color: rgba(0, 0, 0, 0.50);
   }
 }
 
 .bgThird {
-  background-image: url("/cardbgphone.png");
+  background-image: url("/public/cardbgphone.png");
   background-color: #1A1A1A;
-  background-position: 230% 0%;
+  background-position: 230% 0;
   background-size: 80%;
 
   .cardTitle {
@@ -130,6 +130,27 @@
   }
 
   .cardDsc {
-    color: white;
+    color: rgba(255, 255, 255, 0.50);
   }
+}
+
+@media (max-width: 1281px) {
+
+  .aboutCard {
+    height: auto;
+  }
+
+  .bgSecond {
+    background-position: 180% 180%;
+    background-size: 80%;
+  }
+
+  .title {
+    font-size: 48px;
+
+    span {
+      font-size: 48px;
+    }
+  }
+
 }

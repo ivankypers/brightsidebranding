@@ -3,7 +3,6 @@
 import React from 'react';
 import ServicePopup from "@/app/components/popups/ServicePopup";
 import styles from '@/app/styles/Service.module.scss'
-import ActionButton from "@/app/components/ActionButton";
 import Image from "next/image";
 import RequestInput from "@/app/components/RequestInput";
 import ServiceStage from "@/app/components/ServiceStage";
@@ -14,7 +13,6 @@ import {RootState} from "@/redux/store";
 const Stages: React.FC = () => {
     const selectedService = useSelector((state: RootState) => state.service);
 
-    console.log(selectedService)
 
     return (
         <section className="pt-[128px]" >
@@ -37,14 +35,35 @@ const Stages: React.FC = () => {
                             price="40 000"
                             deadline="40"
                             description="Описание для многостраничных сайтов"
-                            imageUrl="/landing.png"
+                            imageUrl="/multipage.png"
                         />
                         <ServicePopup
                             title="ИНТЕРНЕТ-МАГАЗИНЫ"
                             price="80 000"
                             deadline="40"
                             description="Описание для многостраничных сайтов"
-                            imageUrl="/landing.png"
+                            imageUrl="/webstore.png"
+                        />
+                        <ServicePopup
+                            title="ФИРМЕННЫЙ СТИЛЬ"
+                            price="80 000"
+                            deadline="40"
+                            description="Описание для многостраничных сайтов"
+                            imageUrl="/servicestyle.png"
+                        />
+                        <ServicePopup
+                            title="ДИЗАЙН ПРЕЗЕНТАЦИИ"
+                            price="80 000"
+                            deadline="40"
+                            description="Описание для многостраничных сайтов"
+                            imageUrl="/presentationdesign.png"
+                        />
+                        <ServicePopup
+                            title="УПАКОВКА СОЦ. СЕТЕЙ"
+                            price="80 000"
+                            deadline="40"
+                            description="Описание для многостраничных сайтов"
+                            imageUrl="/socialdesign.png"
                         />
 
                     </div>

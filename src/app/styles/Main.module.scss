@@ -1,4 +1,6 @@
 .main {
+  position: relative;
+  overflow: hidden;
   padding-top: 150px;
   padding-bottom: 100px;
   height: 100vh;
@@ -13,6 +15,7 @@
 }
 
 .title {
+  opacity: 0;
   max-width: 890px;
   color: #FFF;
   font-family: Inter, sans-serif;
@@ -29,7 +32,7 @@
 
 .button {
   display: inline-flex;
-  padding: 28px 48px;
+  padding: 18px 48px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -48,11 +51,31 @@
       fill: black;
     }
   }
+
+  &:hover {
+    background: black;
+    color: white;
+
+    svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+.adaptiveButton {
+  display: none;
 }
 
 .about {
-  max-width: 461px;
+  opacity: 0;
 
+}
+
+.aboutContent {
+
+  max-width: 461px;
 }
 
 .service {
@@ -70,4 +93,115 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.buttonWrap {
+  opacity: 0;
+  margin-bottom: auto;
+}
+
+
+@media (max-width: 988px) {
+  .main {
+    padding-bottom: 0;
+  }
+
+  .about {
+    max-width: 988px;
+    padding: 32px 0 60px 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    h2 {
+      position: relative;
+      z-index: 10;
+    }
+
+    h3 {
+      position: relative;
+      z-index: 10;
+    }
+
+    img {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, .2);
+      backdrop-filter: blur(50px);
+      width: 100vw;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      z-index: 1;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .title {
+    max-width: 430px;
+    font-size: 48px;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .types {
+    margin-bottom: 32px;
+  }
+
+  .adaptiveButton {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    background: #FFF;
+    color: #000;
+
+    svg {
+      path {
+        fill: black;
+      }
+    }
+
+
+    &:focus-visible {
+      background: black;
+      color: white;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    &:active {
+      background: black;
+      color: white;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 640px) {
+  .title {
+    max-width: 430px;
+    font-size: 32px;
+  }
+
 }

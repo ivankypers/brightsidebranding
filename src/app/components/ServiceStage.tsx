@@ -1,9 +1,9 @@
+"use client"
+
 import React, {useEffect, useRef} from 'react';
 import styles from '@/app/styles/ServiceStage.module.scss'
 import Image from "next/image";
 import gsap from "gsap";
-import { useGSAP } from '@gsap/react';
-
 interface popupProps {
     title?: string;
     price?: string;
@@ -18,39 +18,15 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
     const priceRef = useRef<HTMLSpanElement>(null);
     const deadlineRef = useRef<HTMLSpanElement>(null);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
+    const imageRef = useRef<HTMLImageElement>(null);
 
     useEffect(() => {
         if (stageRef.current) {
-
-            gsap.fromTo(
-                stageRef.current,
-                { y: 20 },
-                { y: 0, duration: 2 }
-            );
-
-            gsap.fromTo(
-                titleRef.current,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 1 }
-            );
-
-            gsap.fromTo(
-                priceRef.current,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 1 }
-            );
-
-            gsap.fromTo(
-                deadlineRef.current,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 1 }
-            );
-
-            gsap.fromTo(
-                descriptionRef.current,
-                { opacity: 0},
-                { opacity: 1, y: 0, duration: 2 }
-            );
+            gsap.fromTo(titleRef.current, { opacity: 0}, { opacity: 1, duration: 1, ease: "power2.inOut" });
+            gsap.fromTo(priceRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
+            gsap.fromTo(deadlineRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
+            gsap.fromTo(descriptionRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
+            gsap.fromTo(imageRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
         }
     }, [title]);
 
@@ -62,7 +38,7 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
                 <span ref={deadlineRef} className={styles.info}>от {deadline} дней</span>
             </div>
             <p ref={descriptionRef} className={styles.stage}>{description}</p>
-            <Image className={styles.image} src={imageUrl} alt="landing" width={561} height={525}/>
+            <Image ref={imageRef} className={styles.image} src={imageUrl} alt="landing" width={561} height={525}/>
         </div>
     )
 }
