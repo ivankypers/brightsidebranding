@@ -1,14 +1,24 @@
 "use client"
 
-import React, {useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import ActionButton from "@/app/components/ActionButton";
 import styles from '@/app/styles/Header.module.scss'
 import Image from "next/image";
+import gsap from "gsap";
 
 const Header: React.FC = () => {
     const headerContainer = useRef<HTMLHeadElement>(null)
 
 
+    useEffect(() => {
+
+        gsap.fromTo(headerContainer.current, {y: -400, opacity: 0}, {
+            y:0,
+            opacity: 1,
+            duration: 1,
+            ease: "power2.Out"
+        })
+    }, []);
 
 
     return (
@@ -26,19 +36,19 @@ const Header: React.FC = () => {
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
                         <li>
-                            <a href="#">О нас</a>
+                            <a href="#" className={styles.link}>О нас</a>
                         </li>
                         <li>
-                            <a href="#">Проекты</a>
+                            <a href="#" className={styles.link}>Проекты</a>
                         </li>
                         <li>
-                            <a href="#">Отзывы</a>
+                            <a href="#" className={styles.link}>Отзывы</a>
                         </li>
                         <li>
-                            <a href="#">Услуги</a>
+                            <a href="#" className={styles.link}>Услуги</a>
                         </li>
                         <li>
-                            <a href="#">Команда</a>
+                            <a href="#" className={styles.link}>Команда</a>
                         </li>
                     </ul>
                 </nav>

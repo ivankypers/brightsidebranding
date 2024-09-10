@@ -25,7 +25,7 @@ const Main: React.FC = () => {
 
         gsap.fromTo(divRef.current, {opacity: 0, y: 10},
             {
-                opacity: 1, y:0, duration: 1, delay: 1.2, ease: "power2.inOut",
+                opacity: 1, y:0, duration: 1, delay: .5, ease: "power2.inOut",
 
             });
 
@@ -70,7 +70,7 @@ const Main: React.FC = () => {
                     </div>
                 </div>
             </div>
-
+            <SplineModel />
         </div>
     )
 }

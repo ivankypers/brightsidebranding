@@ -2,7 +2,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import serviceReducer from './slices/serviceSlice';
 import splineReducer from './slices/splineSlice';
-// Добавьте другие редьюсеры, если они есть
 // import userReducer from './slices/userSlice';
 
 export const store = configureStore({

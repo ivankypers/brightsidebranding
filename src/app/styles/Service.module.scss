@@ -153,9 +153,30 @@
   }
 }
 
+.accordion {
+  display: none;
+
+}
+
+
 @media (max-width: 1281px) {
   .star {
     width: 200px;
     height: 200px;
+  }
+}
+
+@media (max-width: 988px) {
+  .preview {
+    grid-template-columns: 1fr;
+  }
+
+  .stageWrap {
+    display: none;
+  }
+
+  .accordionActive {
+    display: block;
+    overflow: hidden;
   }
 }

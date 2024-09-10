@@ -1,4 +1,6 @@
 .header {
+  opacity: 0;
+
   position: fixed;
   z-index: 50;
   width: 100%;
@@ -55,6 +57,14 @@
   filter: blur(40px);
   background: rgba(0, 0, 0, 1);
   z-index: -1;
+}
+
+.link {
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 @media (max-width: 1280px) {

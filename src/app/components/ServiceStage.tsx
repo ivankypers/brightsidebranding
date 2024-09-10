@@ -5,9 +5,9 @@ import styles from '@/app/styles/ServiceStage.module.scss'
 import Image from "next/image";
 import gsap from "gsap";
 interface popupProps {
-    title?: string;
-    price?: string;
-    deadline?: string;
+    title: string;
+    price: string;
+    deadline: string;
     description: string;
     imageUrl: string;
 }
@@ -20,26 +20,32 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
     const descriptionRef = useRef<HTMLParagraphElement>(null);
     const imageRef = useRef<HTMLImageElement>(null);
 
+    const innerUserWidth = window.innerWidth;
+
+
     useEffect(() => {
-        if (stageRef.current) {
+        if (stageRef.current && innerUserWidth > 988) {
             gsap.fromTo(titleRef.current, { opacity: 0}, { opacity: 1, duration: 1, ease: "power2.inOut" });
             gsap.fromTo(priceRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
             gsap.fromTo(deadlineRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
             gsap.fromTo(descriptionRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
             gsap.fromTo(imageRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
         }
-    }, [title]);
+    }, [innerUserWidth]);
 
     return (
-        <div ref={stageRef} className={styles.container}>
-            <h2 ref={titleRef} className={styles.title}>{title}</h2>
-            <div className={styles.flex}>
-                <span ref={priceRef} className={styles.info}>от {price} ₽</span>
-                <span ref={deadlineRef} className={styles.info}>от {deadline} дней</span>
+
+            <div ref={stageRef} className={styles.container}>
+                <h2 ref={titleRef} className={styles.title}>{title}</h2>
+                <div className={styles.flex}>
+                    <span ref={priceRef} className={styles.info}>от {price} ₽</span>
+                    <span ref={deadlineRef} className={styles.info}>от {deadline} дней</span>
+                </div>
+                <p ref={descriptionRef} className={styles.stage}>{description}</p>
+                <Image ref={imageRef} className={styles.image} src={imageUrl} alt="landing" width={561} height={525}/>
             </div>
-            <p ref={descriptionRef} className={styles.stage}>{description}</p>
-            <Image ref={imageRef} className={styles.image} src={imageUrl} alt="landing" width={561} height={525}/>
-        </div>
+
+
     )
 }
 
