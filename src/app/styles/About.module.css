@@ -1,0 +1,177 @@
+@charset "UTF-8";
+.titleWrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 60px;
+}
+
+.title {
+  color: #FFF;
+  font-family: "Gothic №60", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.title span {
+  color: #FF672D;
+  font-family: "Gothic №60", Inter, serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.aboutCard {
+  height: 600px;
+  border-radius: 50px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subtitle {
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.cardSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.cardTitle {
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cardDsc {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  max-width: 377px;
+}
+
+.description {
+  max-width: 397px;
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bgFirst {
+  background-image: url("/cardbgwide.png");
+  background-position: center;
+}
+.bgFirst .cardTitle {
+  color: white;
+}
+.bgFirst .cardDsc {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bgSecond {
+  background-image: url("/cardbgorange.png");
+  background-color: white;
+  background-position: 180% 120%;
+  background-size: 80%;
+}
+.bgSecond .cardTitle {
+  color: black;
+}
+.bgSecond .cardDsc {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bgThird {
+  background-image: url("/cardbgphone.png");
+  background-color: #1A1A1A;
+  background-position: 230% 0;
+  background-size: 80%;
+}
+.bgThird .cardTitle {
+  color: white;
+}
+.bgThird .cardDsc {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1280px) {
+  .bgSecond {
+    background-position: 230% 0;
+    background-size: 80%;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .title span {
+    font-size: 48px;
+  }
+}
+@media (max-width: 988px) {
+  .cardWrapper {
+    gap: 50px;
+  }
+  .cardSplit {
+    gap: 50px;
+  }
+  .aboutCard {
+    padding: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .cardSplit {
+    grid-template-columns: 1fr;
+  }
+  .bgThird {
+    background-position: 50% -20%;
+  }
+  .bgSecond {
+    background-position: 200% 0;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .titleWrap {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .title span {
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=About.module.css.map */

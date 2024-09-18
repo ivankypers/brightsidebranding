@@ -92,14 +92,14 @@ const Stages: React.FC = () => {
                             <p className={styles.requestDsc}>
                                 Оставьте заявку ниже и наш менеджер свяжется с вами в ближайшее время
                             </p>
-                            <Image
-                                className={styles.star}
-                                src="/star.svg"
-                                alt="Star Procent"
-                                width={377}
-                                height={377}
-                            />
                         </div>
+                        <Image
+                            className={styles.star}
+                            src="/star.svg"
+                            alt="Star Procent"
+                            width={377}
+                            height={377}
+                        />
                     </div>
                     <form action="">
                         <div className={styles.inputs}>

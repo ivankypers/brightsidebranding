@@ -99,3 +99,33 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: 988px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .actionWrap {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .socialWrap {
+    gap: 32px;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .socialWrap {
+    flex-direction: column;
+  }
+
+  .actionWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

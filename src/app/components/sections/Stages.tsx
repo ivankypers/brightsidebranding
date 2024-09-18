@@ -39,7 +39,6 @@ const Stages: React.FC = () => {
                             <Image
                                 src="/design.svg"
                                 alt="Complex"
-                                objectFit="contain"
                                 width={126}
                                 height={126}
                             />
@@ -52,7 +51,6 @@ const Stages: React.FC = () => {
                             <Image
                                 src="/tabler_flag-question.svg"
                                 alt="Support"
-                                objectFit="contain"
                                 width={126}
                                 height={126}
                             />

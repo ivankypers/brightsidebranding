@@ -56,3 +56,23 @@
   }
 
 }
+
+@media (max-width: 988px) {
+  .projectsWrap {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .projectsLink {
+
+    font-size: 18px;
+
+    svg {
+      width: 80px;
+    }
+
+  }
+}

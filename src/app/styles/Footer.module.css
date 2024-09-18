@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.footer {
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.socialWrap {
+  display: flex;
+  gap: 75px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Gothic №60", sans-serif;
+  margin-bottom: 75px;
+}
+
+.socialTitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Gothic №60", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.social {
+  color: #FFF;
+  font-family: "Gothic №60", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.social:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+}
+
+.listDual {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.scrollTop {
+  display: inline-flex;
+  padding: 7px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  border: 1px solid #FFF;
+  background: rgba(238, 238, 238, 0);
+}
+
+.actionWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.socialOther {
+  display: inline-flex;
+  padding: 7px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  border: 1px solid #FFF;
+  background: rgba(238, 238, 238, 0);
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1281px) {
+  .actionWrap {
+    flex-direction: column;
+  }
+  .scrollTop {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 988px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .actionWrap {
+    flex-direction: row;
+  }
+}
+@media (max-width: 768px) {
+  .socialWrap {
+    gap: 32px;
+  }
+}
+@media (max-width: 430px) {
+  .socialWrap {
+    flex-direction: column;
+  }
+  .actionWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

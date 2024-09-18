@@ -1,0 +1,29 @@
+.model {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(2.7);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 988px) {
+  .model {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200vw;
+    height: 100vh;
+    transform: scale(2) translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+.visible {
+  display: block !important;
+}
+
+/*# sourceMappingURL=Spline.module.css.map */

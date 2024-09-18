@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
     useEffect(() => {
 
-        gsap.fromTo(headerContainer.current, {y: -400, opacity: 0}, {
+        gsap.fromTo(headerContainer.current, {y: -300, opacity: 0}, {
             y:0,
             opacity: 1,
             duration: 1,

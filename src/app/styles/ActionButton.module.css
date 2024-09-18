@@ -1,0 +1,34 @@
+@charset "UTF-8";
+.actionButton {
+  display: inline-flex;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 64px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  font-size: 16px;
+  font-family: "Gothic №60", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+.actionButton:hover {
+  color: black;
+  background-color: white;
+}
+.actionButton:hover svg path {
+  fill: black;
+}
+
+@media (max-width: 430px) {
+  .actionButton {
+    gap: 24px;
+    padding: 16px;
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=ActionButton.module.css.map */

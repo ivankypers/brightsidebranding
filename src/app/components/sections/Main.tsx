@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import ActionButton from "@/app/components/ActionButton";
 import SplineModel from "@/app/components/SplineModel";
@@ -17,7 +17,7 @@ const Main: React.FC = () => {
 
     useEffect(() => {
 
-        gsap.fromTo(titleRef.current, {opacity: 0, y:-20},
+        gsap.fromTo(titleRef.current, {opacity: 0, y: -20},
             {
                 opacity: 1, y: 0, duration: 1, delay: 0, ease: "power2.inOut",
 
@@ -25,19 +25,18 @@ const Main: React.FC = () => {
 
         gsap.fromTo(divRef.current, {opacity: 0, y: 10},
             {
-                opacity: 1, y:0, duration: 1, delay: .5, ease: "power2.inOut",
+                opacity: 1, y: 0, duration: 1, delay: 1, ease: "power2.inOut",
 
             });
 
         gsap.fromTo(buttonRef.current, {opacity: 0, y: -10},
             {
-                opacity: 1, y:0, duration: 1, delay: 1, ease: "power2.inOut"
+                opacity: 1, y: 0, duration: 1, delay: 1, ease: "power2.inOut"
 
             });
 
 
     }, []);
-
 
 
     return (
@@ -55,6 +54,7 @@ const Main: React.FC = () => {
 
                 <div ref={buttonRef} className={styles.buttonWrap}>
                     <ActionButton className={styles.button} text="Бесплатная консультация" onClick={() => {
+
                     }}/>
                 </div>
                 <div ref={divRef} className={styles.about}>
@@ -70,7 +70,7 @@ const Main: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <SplineModel />
+            <SplineModel/>
         </div>
     )
 }

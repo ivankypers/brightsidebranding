@@ -1,0 +1,171 @@
+.main {
+  position: relative;
+  overflow: hidden;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  height: 100vh;
+}
+.main :global .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  opacity: 0;
+  max-width: 890px;
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+.title .titleAccent {
+  color: #FF672D;
+}
+
+.button {
+  display: inline-flex;
+  padding: 18px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #FFF;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button svg {
+  width: 22px;
+  height: 22px;
+}
+.button svg path {
+  fill: black;
+}
+.button:hover {
+  background: black;
+  color: white;
+}
+.button:hover svg path {
+  fill: white;
+}
+
+.adaptiveButton {
+  display: none;
+}
+
+.about {
+  opacity: 0;
+}
+
+.aboutContent {
+  max-width: 461px;
+}
+
+.service {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 48px;
+}
+
+.types {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.buttonWrap {
+  opacity: 0;
+  margin-bottom: auto;
+}
+
+@media (max-width: 988px) {
+  .main {
+    padding-bottom: 0;
+  }
+  .about {
+    max-width: 988px;
+    padding: 32px 0 60px 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  .about h2 {
+    position: relative;
+    z-index: 10;
+  }
+  .about h3 {
+    position: relative;
+    z-index: 10;
+  }
+  .about img {
+    position: relative;
+    z-index: 10;
+  }
+  .about::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    max-width: 430px;
+    font-size: 48px;
+  }
+  .button {
+    display: none;
+  }
+  .types {
+    margin-bottom: 32px;
+  }
+  .adaptiveButton {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    background: #FFF;
+    color: #000;
+  }
+  .adaptiveButton svg path {
+    fill: black;
+  }
+  .adaptiveButton:focus-visible {
+    background: black;
+    color: white;
+  }
+  .adaptiveButton:focus-visible svg path {
+    fill: white;
+  }
+  .adaptiveButton:active {
+    background: black;
+    color: white;
+  }
+  .adaptiveButton:active svg path {
+    fill: white;
+  }
+}
+@media (max-width: 640px) {
+  .title {
+    max-width: 430px;
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=Main.module.css.map */

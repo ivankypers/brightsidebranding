@@ -1,10 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styles from '@/app/styles/Service.module.scss'
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from "@/redux/store";
 import {selectService} from '@/redux/slices/serviceSlice';
 import ServiceStage from "@/app/components/ServiceStage";
-import gsap from "gsap";
 
 interface ServicePopupProps {
     className?: string;
@@ -28,11 +27,7 @@ const ServicePopup: React.FC<ServicePopupProps> = ({className, title, price, dea
 
         if (accordionRef.current && titleRef.current) {
             setAccordionOpen(true);
-            titleRef.current.scrollIntoView({behavior: 'smooth'});
 
-            /*gsap.fromTo(accordionRef.current, {height: 0}, {
-                height: '700px',
-            })*/
         }
 
     };

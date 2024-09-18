@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="lazy loading для spline модели и база для аккордиона услуг в мобилке">
+      <change afterPath="$PROJECT_DIR$/src/app/constructor/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/Constructor.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/About.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Projects.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Projects.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Stages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Stages.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/splineSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/userSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ivankypers&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ivankypers/BSBrandingNext.git&quot;,
+    &quot;accountId&quot;: &quot;319be817-c6a8-4f17-8614-76afb507b4d1&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2lca9zeeNnjAsMI1ATyfsCwy1p8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/luckyme/WebstormProjects/brightsidebranding/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/private/var/folders/sh/7szwbv591573wvvysgcytfz80000gn/T/qodana_output/qodana.sarif.json" reportGuid="cd4e7fa8-97c0-44d6-8f2f-2c8133424504" reportId="brightsidebranding/qodana/2024-09-09" />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/app/pages" />
+      <recent name="$PROJECT_DIR$/src/app/pages/constructor" />
+      <recent name="$PROJECT_DIR$/public/fonts" />
+      <recent name="$PROJECT_DIR$/src/app/components/sections" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="" />
+      <created>1725481670089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725481670089</updated>
+      <workItem from="1725481671267" duration="4391000" />
+      <workItem from="1725523066183" duration="4809000" />
+      <workItem from="1725531290108" duration="2528000" />
+      <workItem from="1725562340056" duration="11434000" />
+      <workItem from="1725611232667" duration="296000" />
+      <workItem from="1725638598867" duration="326000" />
+      <workItem from="1725648037120" duration="15103000" />
+      <workItem from="1725731209573" duration="7063000" />
+      <workItem from="1725791493427" duration="13822000" />
+      <workItem from="1725831154436" duration="997000" />
+      <workItem from="1725832158931" duration="1461000" />
+      <workItem from="1725871177506" duration="1149000" />
+      <workItem from="1725875359211" duration="803000" />
+      <workItem from="1725908404828" duration="1216000" />
+      <workItem from="1725911054253" duration="1887000" />
+      <workItem from="1725915675049" duration="254000" />
+      <workItem from="1725916048426" duration="605000" />
+      <workItem from="1725963580141" duration="3414000" />
+      <workItem from="1725968862434" duration="2359000" />
+      <workItem from="1725994930851" duration="3166000" />
+      <workItem from="1726050802926" duration="1714000" />
+      <workItem from="1726129209310" duration="920000" />
+      <workItem from="1726135069618" duration="2549000" />
+      <workItem from="1726149374669" duration="2524000" />
+      <workItem from="1726162912361" duration="3114000" />
+      <workItem from="1726236671119" duration="4724000" />
+      <workItem from="1726435758921" duration="756000" />
+      <workItem from="1726643857537" duration="1603000" />
+      <workItem from="1726651935414" duration="25000" />
+      <workItem from="1726675983666" duration="272000" />
+      <workItem from="1726676280904" duration="1701000" />
+      <workItem from="1726685153879" duration="1019000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit again">
+      <option name="closed" value="true" />
+      <created>1725526735081</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725526735081</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Вёрстку пописал, разбил кое-что на компоненты">
+      <option name="closed" value="true" />
+      <created>1725577670161</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725577670161</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Сделал все секции добавил редукс, накинул его на сервис и прокинул пропсы чтоб услуги появлялись">
+      <option name="closed" value="true" />
+      <created>1725657773895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725657773895</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gsap приколы">
+      <option name="closed" value="true" />
+      <created>1725658782180</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725658782180</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Анимации в main tsx">
+      <option name="closed" value="true" />
+      <created>1725965008223</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725965008223</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lazy loading для spline модели и база для аккордиона услуг в мобилке">
+      <option name="closed" value="true" />
+      <created>1725997600409</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725997600409</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit again" />
+    <MESSAGE value="Вёрстку пописал, разбил кое-что на компоненты" />
+    <MESSAGE value="Сделал все секции добавил редукс, накинул его на сервис и прокинул пропсы чтоб услуги появлялись" />
+    <MESSAGE value="gsap приколы" />
+    <MESSAGE value="Анимации в main tsx" />
+    <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
+    <option name="LAST_COMMIT_MESSAGE" value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
+  </component>
+</project>

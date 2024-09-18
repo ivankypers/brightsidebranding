@@ -37,8 +37,8 @@ const Footer : React.FC = () => {
                         <div>
                             <div className={styles.socialTitle}>СОЦ. СЕТИ</div>
                             <ul className={styles.listDual}>
-                                <li className={styles.socialOther}><a href="">VKONTAKTE</a></li>
-                                <li className={styles.socialOther}><a href="">TELEGRAM</a></li>
+                                <li className={styles.socialOther}><a href="">VK</a></li>
+                                <li className={styles.socialOther}><a href="">TG</a></li>
                             </ul>
                         </div>
                         <div>

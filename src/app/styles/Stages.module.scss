@@ -145,3 +145,54 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .titleWrap {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .cardWrap {
+    justify-items: center;
+    grid-gap: 12px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 24px 33px;
+  }
+
+  .cardTitle {
+    font-size: 32px;
+  }
+
+  .cardDsc {
+    font-size: 14px;
+  }
+
+  .cardSubtitle {
+    font-size: 14px;
+  }
+
+  .hand {
+    right: 30px;
+    bottom: -200px;
+  }
+
+  .offer {
+    padding-bottom: 200px;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .hand {
+    right: 0;
+    bottom: 0;
+  }
+  
+}

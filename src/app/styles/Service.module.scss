@@ -43,6 +43,7 @@
 }
 
 .banner {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 96px;
@@ -143,6 +144,13 @@
   border: 4px solid #FF672D;
   background: rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(50px);
+
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+  &:hover {
+    background: #FF672D;
+    color: white;
+  }
 }
 
 .active {
@@ -179,4 +187,51 @@
     display: block;
     overflow: hidden;
   }
+}
+
+@media (max-width: 988px) {
+  .banner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .star {
+    right: 0;
+    top: 0;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceTitle {
+    font-size: 32px;
+  }
+
+  .actionTitle {
+    font-size: 32px;
+  }
+
+  .star {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .serviceTitle {
+    font-size: clamp(16px, 2vw + 1rem, 32px);
+  }
+
+  .formButton {
+    font-size: 16px;
+  }
+
+  .input {
+    font-size: 20px;
+  }
+
 }
