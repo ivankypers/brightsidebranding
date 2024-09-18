@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="lazy loading для spline модели и база для аккордиона услуг в мобилке">
-      <change afterPath="$PROJECT_DIR$/src/app/constructor/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/styles/Constructor.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/About.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Projects.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Projects.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Stages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Stages.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/splineSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/userSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="Добавил адаптивы и новые компоненты">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +128,7 @@
       <workItem from="1726651935414" duration="25000" />
       <workItem from="1726675983666" duration="272000" />
       <workItem from="1726676280904" duration="1701000" />
-      <workItem from="1726685153879" duration="1019000" />
+      <workItem from="1726685153879" duration="1855000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -194,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725997600409</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавил адаптивы и новые компоненты">
+      <option name="closed" value="true" />
+      <created>1726686844058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726686844058</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +210,7 @@
     <MESSAGE value="gsap приколы" />
     <MESSAGE value="Анимации в main tsx" />
     <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
-    <option name="LAST_COMMIT_MESSAGE" value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
+    <MESSAGE value="Добавил адаптивы и новые компоненты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил адаптивы и новые компоненты" />
   </component>
 </project>
