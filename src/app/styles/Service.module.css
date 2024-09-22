@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.section {
+  overflow: hidden;
+}
+
 .preview {
   position: relative;
   display: grid;

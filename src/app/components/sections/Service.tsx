@@ -2,7 +2,10 @@
 
 import React from 'react';
 import ServicePopup from "@/app/components/popups/ServicePopup";
+
 import styles from '@/app/styles/Service.module.scss'
+import clsx from "clsx"
+
 import Image from "next/image";
 import RequestInput from "@/app/components/RequestInput";
 import ServiceStage from "@/app/components/ServiceStage";
@@ -15,7 +18,7 @@ const Stages: React.FC = () => {
 
 
     return (
-        <section className="pt-[128px]" >
+        <section className={clsx('pt-[128px]', styles.section)}>
             <div className="container">
                 <div className="mb-[128px]">
                     <h4>[УСЛУГИ]</h4>
@@ -80,7 +83,7 @@ const Stages: React.FC = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className={styles.bannerWrap}>
                     <div className={styles.banner}>
                         <h2 className={styles.actionTitle}>
                             ХОТИТЕ <span>ОБСУДИТЬ ПРОЕКТ?</span>

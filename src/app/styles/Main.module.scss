@@ -1,15 +1,18 @@
 .main {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   padding-top: 150px;
   padding-bottom: 100px;
-  height: 100vh;
+  min-height: 100vh;
+  box-sizing: border-box;
 
   :global {
     .container {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      flex-grow: 1;
     }
   }
 }

@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="Добавил адаптивы и новые компоненты">
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="export некста">
+      <change afterPath="$PROJECT_DIR$/public/showcase.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/sections/Showcase.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/Showcase.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ServiceStage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ServiceStage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Main.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Main.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Main.module.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +50,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:ivankypers/BSBrandingNext.git&quot;,
+    &quot;url&quot;: &quot;git@github.com:ivankypers/brightsidebranding.git&quot;,
     &quot;accountId&quot;: &quot;319be817-c6a8-4f17-8614-76afb507b4d1&quot;
   }
 }</component>
@@ -55,6 +70,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/luckyme/WebstormProjects/brightsidebranding/public&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -74,6 +90,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/pages" />
@@ -128,7 +147,11 @@
       <workItem from="1726651935414" duration="25000" />
       <workItem from="1726675983666" duration="272000" />
       <workItem from="1726676280904" duration="1701000" />
-      <workItem from="1726685153879" duration="1855000" />
+      <workItem from="1726685153879" duration="3974000" />
+      <workItem from="1726690912132" duration="2412000" />
+      <workItem from="1726753202659" duration="3913000" />
+      <workItem from="1726821277301" duration="8685000" />
+      <workItem from="1726915499662" duration="75000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -186,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726686844058</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="export некста">
+      <option name="closed" value="true" />
+      <created>1726687578524</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726687578524</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +242,7 @@
     <MESSAGE value="Анимации в main tsx" />
     <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
     <MESSAGE value="Добавил адаптивы и новые компоненты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил адаптивы и новые компоненты" />
+    <MESSAGE value="export некста" />
+    <option name="LAST_COMMIT_MESSAGE" value="export некста" />
   </component>
 </project>

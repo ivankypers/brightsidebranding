@@ -26,10 +26,7 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
     useEffect(() => {
         if (stageRef.current && innerUserWidth > 988) {
             gsap.fromTo(titleRef.current, { opacity: 0}, { opacity: 1, duration: 1, ease: "power2.inOut" });
-            gsap.fromTo(priceRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
-            gsap.fromTo(deadlineRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
-            gsap.fromTo(descriptionRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
-            gsap.fromTo(imageRef.current, { opacity: 0}, { opacity: 1, duration: 1.5, ease: "power2.inOut" });
+
         }
     }, [innerUserWidth]);
 
