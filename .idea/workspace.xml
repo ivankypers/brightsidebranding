@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="export некста">
-      <change afterPath="$PROJECT_DIR$/public/showcase.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/sections/Showcase.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/styles/Showcase.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="фикс стилей, аналитика и шоукейс секция">
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ServiceStage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ServiceStage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Main.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Main.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Main.module.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/constructor/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,24 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/luckyme/WebstormProjects/brightsidebranding/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/luckyme/WebstormProjects/brightsidebranding/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/Users/luckyme/WebstormProjects/brightsidebranding/public",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.qodana",
+    "ts.external.directory.path": "/Users/luckyme/WebstormProjects/brightsidebranding/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="/private/var/folders/sh/7szwbv591573wvvysgcytfz80000gn/T/qodana_output/qodana.sarif.json" reportGuid="cd4e7fa8-97c0-44d6-8f2f-2c8133424504" reportId="brightsidebranding/qodana/2024-09-09" />
@@ -152,6 +141,7 @@
       <workItem from="1726753202659" duration="3913000" />
       <workItem from="1726821277301" duration="8685000" />
       <workItem from="1726915499662" duration="75000" />
+      <workItem from="1727024723761" duration="3744000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -217,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726687578524</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="фикс стилей, аналитика и шоукейс секция">
+      <option name="closed" value="true" />
+      <created>1727026947066</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727026947067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +241,7 @@
     <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
     <MESSAGE value="Добавил адаптивы и новые компоненты" />
     <MESSAGE value="export некста" />
-    <option name="LAST_COMMIT_MESSAGE" value="export некста" />
+    <MESSAGE value="фикс стилей, аналитика и шоукейс секция" />
+    <option name="LAST_COMMIT_MESSAGE" value="фикс стилей, аналитика и шоукейс секция" />
   </component>
 </project>
