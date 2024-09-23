@@ -127,6 +127,14 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.cardTextAdaptive {
+  display: none;
+}
+
+.adaptiveImage {
+  display: none;
+}
+
 @media (max-width: 1280px) {
   .bgSecond {
     background-position: 180% -200px;
@@ -170,13 +178,46 @@
   .title span {
     font-size: 32px;
   }
+  .bgFirst {
+    display: none;
+  }
+  .cardTextAdaptive {
+    display: flex;
+    gap: 8px;
+  }
+  .adaptiveImage {
+    display: block;
+    background-image: url("/cardbgwide.png");
+    background-position: center;
+  }
+  .textWrap {
+    gap: 32px;
+  }
 }
 @media (max-width: 430px) {
+  .aboutCard {
+    height: 400px;
+  }
+  .adaptiveHide {
+    display: none;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  .cardTitle {
+    font-size: 24px;
+  }
+  .cardDsc {
+    font-size: 16px;
+  }
   .bgSecond {
-    background-position: 140% 250px;
+    background-position: 50% 100px;
+    background-size: 120%;
   }
   .bgThird {
-    background-position: 50% -5%;
+    background-size: 130%;
+    background-position: 50% -150px;
   }
 }
 

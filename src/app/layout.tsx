@@ -1,5 +1,5 @@
 import React from "react";
-import type {Metadata} from "next";
+import type {Metadata, Viewport} from "next";
 import "./globals.css";
 import {Providers} from "@/app/providers";
 import { Analytics } from "@vercel/analytics/react"
@@ -14,6 +14,11 @@ export const metadata: Metadata = {
         icon: '/favicon.png',
     },
 };
+
+export const viewport: Viewport = {
+    initialScale: 1,
+    width: 'device-width'
+}
 
 export default function RootLayout({
                                        children,

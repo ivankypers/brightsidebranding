@@ -1,9 +1,11 @@
 "use client"
 
 import aboutStyles from "@/app/styles/About.module.scss";
-import styles from "@/app/styles/Projects.module.scss";
 import React from "react";
 import ProjectCard from "@/app/components/cards/ProjectCard";
+
+import styles from "@/app/styles/Projects.module.scss";
+import clsx from "clsx";
 
 const ProjectsSection : React.FC = () => {
 
@@ -15,7 +17,7 @@ const ProjectsSection : React.FC = () => {
                     <div className={aboutStyles.subtitle}>[&gt; 20 ПРОЕКТОВ ВЫПОЛНЕНО]</div>
                     <div className={aboutStyles.title}>РЕАЛИЗОВАННЫЕ <span>ПРОЕКТЫ</span></div>
                 </div>
-                <div className={aboutStyles.titleWrap}>
+                <div className={clsx(aboutStyles.titleWrap, aboutStyles.adaptiveHide)}>
                     <div className={aboutStyles.subtitle}>[ПОРТФОЛИО]</div>
                     <div className={aboutStyles.description}>Наши работы помогают опередить конкурентов на годы вперед и вывести имидж компании на новый уровень.</div>
                 </div>

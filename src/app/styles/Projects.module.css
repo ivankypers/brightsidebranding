@@ -60,5 +60,10 @@
     width: 80px;
   }
 }
+@media (max-width: 430px) {
+  .allprojects {
+    padding: 15px 0;
+  }
+}
 
 /*# sourceMappingURL=Projects.module.css.map */

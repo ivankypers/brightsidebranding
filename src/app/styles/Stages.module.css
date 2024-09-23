@@ -20,6 +20,10 @@
   line-height: normal;
   text-transform: uppercase;
 }
+.title span {
+  font-style: inherit;
+  color: #FF672D;
+}
 
 .subtitle {
   color: #000;
@@ -174,23 +178,59 @@
   }
 }
 @media (max-width: 430px) {
+  .section {
+    padding-top: 48px;
+  }
+  .subtitle {
+    text-align: right;
+    font-size: 16px;
+  }
+  .offer {
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
+  }
+  .offerTitle {
+    gap: 24px;
+  }
   .title {
-    font-size: 32px;
+    font-size: 36px;
+  }
+  .title span {
+    font-size: inherit;
   }
   .hand {
-    right: 0;
-    bottom: 0;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%) rotateY(180deg);
+  }
+  .cardImg {
+    width: 292px;
+    height: 347px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .cardWrap {
     grid-template-columns: 1fr;
     gap: 24px;
-    margin-bottom: 140px;
+    margin-bottom: 48px;
   }
   .card {
     display: flex;
     width: 100%;
     height: 100%;
     padding: 30px 40px;
+  }
+  .imageBlock {
+    height: 400px;
+  }
+  .offerDsc {
+    font-size: 16px;
+  }
+  .stageCardImg img {
+    width: 76px;
+  }
+  .titleWrap {
+    margin-bottom: 32px;
   }
 }
 
