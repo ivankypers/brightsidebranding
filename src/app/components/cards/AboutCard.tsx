@@ -3,8 +3,8 @@ import React from "react";
 
 
 interface CardProps {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
     customClass: string;
 }
 

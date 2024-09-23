@@ -127,9 +127,17 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.cardTextAdaptive {
+  display: none;
+}
+
+.adaptiveImage {
+  display: none;
+}
+
 @media (max-width: 1280px) {
   .bgSecond {
-    background-position: 230% 0;
+    background-position: 180% -200px;
     background-size: 80%;
   }
   .title {
@@ -158,11 +166,9 @@
     background-position: 50% -20%;
   }
   .bgSecond {
-    background-position: 200% 0;
+    background-position: 180% 150px;
     justify-content: flex-start;
   }
-}
-@media (max-width: 768px) {
   .titleWrap {
     grid-template-columns: 1fr;
   }
@@ -171,6 +177,47 @@
   }
   .title span {
     font-size: 32px;
+  }
+  .bgFirst {
+    display: none;
+  }
+  .cardTextAdaptive {
+    display: flex;
+    gap: 8px;
+  }
+  .adaptiveImage {
+    display: block;
+    background-image: url("/cardbgwide.png");
+    background-position: center;
+  }
+  .textWrap {
+    gap: 32px;
+  }
+}
+@media (max-width: 430px) {
+  .aboutCard {
+    height: 400px;
+  }
+  .adaptiveHide {
+    display: none;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  .cardTitle {
+    font-size: 24px;
+  }
+  .cardDsc {
+    font-size: 16px;
+  }
+  .bgSecond {
+    background-position: 50% 100px;
+    background-size: 120%;
+  }
+  .bgThird {
+    background-size: 130%;
+    background-position: 50% -150px;
   }
 }
 

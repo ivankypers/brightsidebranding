@@ -39,9 +39,6 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
             gsap.fromTo(imageWrapRef.current, { opacity: 0, scale: 0.9}, { opacity: 1, scale: 1, duration: 1.5, ease: "power2.inOut" });
         }
 
-        return () => {
-            gsap.fromTo(titleRef.current, { opacity: 1}, { opacity: 0, duration: 1, ease: "power2.inOut" });
-        }
     }, [innerUserWidth, selectedService]);
 
     return (
@@ -51,7 +48,7 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
                     <h2 ref={titleRef} className={styles.title}>{title}</h2>
                 </div>
                 <div className={styles.overflowh}>
-                    <div className={styles.flex}>
+                    <div className={styles.description}>
                         <span ref={priceRef} className={styles.info}>от {price} ₽</span>
                         <span ref={deadlineRef} className={styles.info}>от {deadline} дней</span>
                     </div>

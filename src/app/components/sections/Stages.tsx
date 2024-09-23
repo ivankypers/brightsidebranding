@@ -1,9 +1,11 @@
 "use client"
 
 import React from 'react';
-import styles from '@/app/styles/Stages.module.scss'
 import Image from 'next/image';
 import ActionButton from "@/app/components/ActionButton";
+
+import styles from '@/app/styles/Stages.module.scss'
+import clsx from "clsx";
 
 
 const Stages: React.FC = () => {
@@ -35,7 +37,7 @@ const Stages: React.FC = () => {
                     </div>
 
                     <div className={styles.card}>
-                        <div className="flex flex-col mb-auto">
+                        <div className={clsx("flex flex-col mb-auto", styles.stageCardImg)}>
                             <Image
                                 src="/design.svg"
                                 alt="Complex"
@@ -47,7 +49,7 @@ const Stages: React.FC = () => {
                     </div>
 
                     <div className={styles.card}>
-                        <div className="flex flex-col mb-auto">
+                        <div className={clsx("flex flex-col mb-auto", styles.stageCardImg)}>
                             <Image
                                 src="/tabler_flag-question.svg"
                                 alt="Support"
@@ -62,13 +64,13 @@ const Stages: React.FC = () => {
                 </div>
                 <div className={styles.offer}>
                     <div className={styles.offerTitle}>
-                        <h2 className={styles.title}>ПЕРВАЯ СТРАНИЦА ТВОЕГО ПРОЕКТА БЕСПЛАТНО</h2>
+                        <h2 className={styles.title}>ПЕРВАЯ СТРАНИЦА ТВОЕГО ПРОЕКТА <span>БЕСПЛАТНО</span></h2>
                         <p className={styles.offerDsc}>Ответьте на несколько вопросов и учавствуйте в акции!</p>
                         <div>
                             <ActionButton className={styles.actionButton} text="Пройти опрос" onClick={() => {}}/>
                         </div>
                     </div>
-                    <div className="relative">
+                    <div className={clsx('relative', styles.imageBlock)}>
                         <Image
                             className={styles.cardImg}
                             src="/offercards.png"

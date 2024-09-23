@@ -21,7 +21,7 @@ const Stages: React.FC = () => {
     return (
         <section className={clsx('pt-[128px]', styles.section)}>
             <div className="container">
-                <div className="mb-[128px]">
+                <div className="mb-[40px] md:mb-[80px] xl:mb-[128px]">
                     <h4>[УСЛУГИ]</h4>
                     <p>6+ НАПРАВЛЕНИЙ</p>
                 </div>
@@ -82,6 +82,21 @@ const Stages: React.FC = () => {
                             />
                         )}
                     </div>
+                    <div>
+                        <p className={styles.alert}>
+                            *Цены указаны ориентировочно и могут буть индивидуальными для каждого проекта
+                        </p>
+                        <a href="/" className={styles.pdf} download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29"
+                                 fill="none">
+                                <path
+                                    d="M14.5 19.3335L8.45831 13.2918L10.15 11.5397L13.2916 14.6814V4.8335H15.7083V14.6814L18.85 11.5397L20.5416 13.2918L14.5 19.3335ZM7.24998 24.1668C6.5854 24.1668 6.01667 23.9304 5.54381 23.4575C5.07095 22.9847 4.83412 22.4156 4.83331 21.7502V18.1252H7.24998V21.7502H21.75V18.1252H24.1666V21.7502C24.1666 22.4147 23.9302 22.9839 23.4574 23.4575C22.9845 23.9312 22.4154 24.1676 21.75 24.1668H7.24998Z"
+                                    fill="white"/>
+                            </svg>
+                            скачать прайс лист
+                        </a>
+                    </div>
+
                 </div>
 
                 <div className={styles.bannerWrap}>
