@@ -10,6 +10,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
     title: "BRIGHTSIDE BRANDING",
     description: "Мы дизайн делаем. И сайт можем к дизайну написать. В общем всё что угодно, но не конструировать самолёт",
+    icons: {
+        icon: '/favicon.png',
+    },
 };
 
 export default function RootLayout({
@@ -20,9 +23,9 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body>
-            <Providers>{children}</Providers>
-            <Analytics />
-            <SpeedInsights />
+        <Providers>{children}</Providers>
+        <Analytics/>
+        <SpeedInsights/>
         </body>
         </html>
     );
