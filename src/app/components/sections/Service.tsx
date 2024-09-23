@@ -13,9 +13,10 @@ import {useSelector} from "react-redux";
 import {RootState} from "@/redux/store";
 
 
+
+
 const Stages: React.FC = () => {
     const selectedService = useSelector((state: RootState) => state.service);
-
 
     return (
         <section className={clsx('pt-[128px]', styles.section)}>

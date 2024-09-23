@@ -6,6 +6,8 @@
 }
 
 .title {
+  display: block;
+  overflow: hidden;
   color: #FFF;
   font-family: "Gothic №60", sans-serif;
   font-size: 24px;
@@ -41,9 +43,21 @@
 }
 
 .image {
+  position: absolute;
+
   width: 561px;
   height: 525px;
   border-radius: 25px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
+.overflowh {
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 561px;
+  height: 525px;
+}
