@@ -70,7 +70,7 @@ const Main: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/*<SplineModel />*/}
+            <SplineModel />
         </div>
     )
 }
