@@ -17,7 +17,7 @@
   margin-bottom: 24px;
 }
 
-.flex {
+.description {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -44,7 +44,6 @@
 }
 
 .image {
-  position: absolute;
   width: 561px;
   height: 525px;
   border-radius: 25px;
@@ -60,6 +59,20 @@
   overflow: hidden;
   width: 561px;
   height: 525px;
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 100%;
+  }
+  .imageWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .description {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=ServiceStage.module.css.map */

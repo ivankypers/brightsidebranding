@@ -190,9 +190,26 @@
 }
 
 @media (max-width: 430px) {
+  .title {
+    font-size: 32px;
+  }
+
   .hand {
     right: 0;
     bottom: 0;
+  }
+
+  .cardWrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 140px;
+  }
+
+  .card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px;
   }
   
 }

@@ -129,7 +129,7 @@
 
 @media (max-width: 1280px) {
   .bgSecond {
-    background-position: 230% 0;
+    background-position: 180% -200px;
     background-size: 80%;
   }
   .title {
@@ -158,11 +158,9 @@
     background-position: 50% -20%;
   }
   .bgSecond {
-    background-position: 200% 0;
+    background-position: 180% 150px;
     justify-content: flex-start;
   }
-}
-@media (max-width: 768px) {
   .titleWrap {
     grid-template-columns: 1fr;
   }
@@ -171,6 +169,14 @@
   }
   .title span {
     font-size: 32px;
+  }
+}
+@media (max-width: 430px) {
+  .bgSecond {
+    background-position: 140% 250px;
+  }
+  .bgThird {
+    background-position: 50% -5%;
   }
 }
 

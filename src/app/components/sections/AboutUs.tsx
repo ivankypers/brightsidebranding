@@ -1,8 +1,9 @@
 "use client"
 
 import React from 'react';
-import styles from '@/app/styles/About.module.scss'
 import AboutCard from "@/app/components/cards/AboutCard";
+
+import styles from '@/app/styles/About.module.scss'
 
 
 const AboutUs : React.FC = () => {
