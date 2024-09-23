@@ -25,6 +25,8 @@ const ServicePopup: React.FC<ServicePopupProps> = ({className, title, price, dea
     const selectedService = useSelector((state: RootState) => state.service);
     const openAccordion = useSelector((state: RootState) => state.accordion.openAccordion);
 
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const accordionRef = useRef<HTMLDivElement>(null);
 
     const handleClick = () => {
 
@@ -36,11 +38,19 @@ const ServicePopup: React.FC<ServicePopupProps> = ({className, title, price, dea
             setAccordionOpen(!isAccordionOpen);
         }
 
+        setTimeout(() => {
+            if(window.innerWidth < 988 && titleRef.current) {
+                titleRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+        }, 50)
+
+
+
     };
 
 
-    const titleRef = useRef<HTMLHeadingElement>(null);
-    const accordionRef = useRef<HTMLDivElement>(null);
+
 
 
     const isActive = selectedService.title === title;
