@@ -2,6 +2,9 @@
 
 import React from 'react';
 import styles from '../styles/ActionButton.module.scss'
+import {setCursorText, setCursorVariant} from "@/redux/slices/CursorSlice";
+import {useDispatch, useSelector} from "react-redux";
+
 
 interface ButtonProps {
     text: string;
@@ -10,8 +13,22 @@ interface ButtonProps {
 }
 
 const ActionButton :React.FC<ButtonProps> = ({text, onClick, className}) => {
+    const dispatch = useDispatch();
+
+
+    function contactEnter(event: any) {
+        dispatch(setCursorText("👋"));
+        dispatch(setCursorVariant("contact"));
+    }
+
+    function contactLeave(event: any) {
+        dispatch(setCursorText(""));
+        dispatch(setCursorVariant("default"));
+    }
+
+
     return (
-    <button className={`${styles.actionButton} ${className}`} onClick={onClick}>
+    <button className={`${styles.actionButton} ${className}`} onClick={onClick} onMouseEnter={contactEnter} onMouseLeave={contactLeave}>
         <span>{text}</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
              fill="none">

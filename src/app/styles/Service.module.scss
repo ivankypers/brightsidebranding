@@ -104,20 +104,8 @@
   position: absolute;
   right: -80px;
   top: -150px;
-  animation: rotations 10s infinite ease-in-out;
 }
 
-@keyframes rotations {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
 .input {
   display: flex;

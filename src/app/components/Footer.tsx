@@ -42,7 +42,7 @@ const Footer : React.FC = () => {
                             </ul>
                         </div>
                         <div>
-                            <button className={styles.scrollTop}>
+                            <button className={styles.scrollTop} onClick={() => {window.scrollTo(0, 0)}}>
                                 ВЕРНУТЬСЯ НАВЕРХ
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17"
                                      fill="none">

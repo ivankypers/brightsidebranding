@@ -5,6 +5,8 @@ import {Providers} from "@/app/providers";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+import store from "@/redux/store";
+
 
 
 export const metadata: Metadata = {

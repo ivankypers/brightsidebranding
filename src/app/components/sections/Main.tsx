@@ -11,6 +11,7 @@ import styles from '@/app/styles/Main.module.scss'
 
 const Main: React.FC = () => {
 
+
     const titleRef = useRef<HTMLHeadingElement>(null);
     const divRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
@@ -39,8 +40,10 @@ const Main: React.FC = () => {
     }, []);
 
 
+
+
     return (
-        <div className={styles.main}>
+        <section className={styles.main}>
             <div className="container">
 
 
@@ -53,7 +56,10 @@ const Main: React.FC = () => {
 
 
                 <div ref={buttonRef} className={styles.buttonWrap}>
-                    <ActionButton className={styles.button} text="Бесплатная консультация" onClick={() => {
+                    <ActionButton
+                        className={styles.button}
+                        text="Бесплатная консультация"
+                        onClick={() => {
 
                     }}/>
                 </div>
@@ -71,7 +77,7 @@ const Main: React.FC = () => {
                 </div>
             </div>
             <SplineModel />
-        </div>
+        </section>
     )
 }
 

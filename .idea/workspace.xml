@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="Аналитика и SpeedInsights">
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/accordionSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ServiceStage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ServiceStage.tsx" afterDir="false" />
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="custom cursor and redux slice">
       <change beforePath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Service.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Service.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/ServiceStage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/ServiceStage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/ServiceStage.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/ServiceStage.module.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/ServiceStage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/ServiceStage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Cursor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Cursor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Marque.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Marque.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/luckyme/WebstormProjects/brightsidebranding/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/luckyme/WebstormProjects/brightsidebranding/src/app&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -89,14 +81,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/styles" />
+      <recent name="$PROJECT_DIR$/src/app/components/Cursor" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/pages" />
-      <recent name="$PROJECT_DIR$/src/app/pages/constructor" />
-      <recent name="$PROJECT_DIR$/public/fonts" />
-      <recent name="$PROJECT_DIR$/src/app/components/sections" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -152,6 +145,15 @@
       <workItem from="1726915499662" duration="75000" />
       <workItem from="1727024723761" duration="3744000" />
       <workItem from="1727028476994" duration="9877000" />
+      <workItem from="1727079114214" duration="16799000" />
+      <workItem from="1727156430715" duration="8313000" />
+      <workItem from="1727213660066" duration="4000" />
+      <workItem from="1727213671092" duration="1000" />
+      <workItem from="1727393086143" duration="368000" />
+      <workItem from="1727610184585" duration="2345000" />
+      <workItem from="1727612542347" duration="4488000" />
+      <workItem from="1727617868993" duration="2874000" />
+      <workItem from="1727620752388" duration="4584000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -233,7 +235,71 @@
       <option name="project" value="LOCAL" />
       <updated>1727028778059</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="accordion fix и исправил карточки услуг">
+      <option name="closed" value="true" />
+      <created>1727079225160</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727079225160</updated>
+    </task>
+    <task id="LOCAL-00012" summary="фиксы адаптивов и аккордеона">
+      <option name="closed" value="true" />
+      <created>1727099777970</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727099777970</updated>
+    </task>
+    <task id="LOCAL-00013" summary="favicon added">
+      <option name="closed" value="true" />
+      <created>1727106944873</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727106944873</updated>
+    </task>
+    <task id="LOCAL-00014" summary="mobile adaptives for 430px and lower">
+      <option name="closed" value="true" />
+      <created>1727112752252</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1727112752252</updated>
+    </task>
+    <task id="LOCAL-00015" summary="spline model">
+      <option name="closed" value="true" />
+      <created>1727112970873</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1727112970873</updated>
+    </task>
+    <task id="LOCAL-00016" summary="service popups fixes">
+      <option name="closed" value="true" />
+      <created>1727113879163</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1727113879163</updated>
+    </task>
+    <task id="LOCAL-00017" summary="burger menu basic animation">
+      <option name="closed" value="true" />
+      <created>1727174373105</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727174373105</updated>
+    </task>
+    <task id="LOCAL-00018" summary="custom cursor and redux slice">
+      <option name="closed" value="true" />
+      <created>1727621888362</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1727621888362</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +327,14 @@
     <MESSAGE value="export некста" />
     <MESSAGE value="фикс стилей, аналитика и шоукейс секция" />
     <MESSAGE value="Аналитика и SpeedInsights" />
-    <option name="LAST_COMMIT_MESSAGE" value="Аналитика и SpeedInsights" />
+    <MESSAGE value="accordion fix и исправил карточки услуг" />
+    <MESSAGE value="фиксы адаптивов и аккордеона" />
+    <MESSAGE value="favicon added" />
+    <MESSAGE value="mobile adaptives for 430px and lower" />
+    <MESSAGE value="spline model" />
+    <MESSAGE value="service popups fixes" />
+    <MESSAGE value="burger menu basic animation" />
+    <MESSAGE value="custom cursor and redux slice" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom cursor and redux slice" />
   </component>
 </project>
