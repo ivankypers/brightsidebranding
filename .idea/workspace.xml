@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="burger menu basic animation">
-      <change afterPath="$PROJECT_DIR$/src/app/components/Cursor/Cursor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/Marque.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/styles/Marque.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/CursorSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ActionButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ActionButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/cards/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/cards/ProjectCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/AboutUs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="custom cursor and redux slice">
+      <change beforePath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/popups/ServicePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Service.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Stages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Cursor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Cursor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/Marque.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Marque.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +85,11 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/styles" />
       <recent name="$PROJECT_DIR$/src/app/components/Cursor" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/pages" />
-      <recent name="$PROJECT_DIR$/src/app/pages/constructor" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -162,6 +153,7 @@
       <workItem from="1727610184585" duration="2345000" />
       <workItem from="1727612542347" duration="4488000" />
       <workItem from="1727617868993" duration="2874000" />
+      <workItem from="1727620752388" duration="4584000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -299,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727174373105</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="custom cursor and redux slice">
+      <option name="closed" value="true" />
+      <created>1727621888362</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1727621888362</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +334,7 @@
     <MESSAGE value="spline model" />
     <MESSAGE value="service popups fixes" />
     <MESSAGE value="burger menu basic animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="burger menu basic animation" />
+    <MESSAGE value="custom cursor and redux slice" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom cursor and redux slice" />
   </component>
 </project>

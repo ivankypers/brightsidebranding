@@ -202,11 +202,10 @@
   .menuActive {
     span {
       top: 17px;
-      transform: rotate(-45deg);
 
       &::before {
         top: 0;
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
       }
 
       &::after {

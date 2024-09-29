@@ -10,14 +10,16 @@ import Image from "next/image";
 import RequestInput from "@/app/components/RequestInput";
 import ServiceStage from "@/app/components/ServiceStage";
 
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/redux/store";
-
-
 
 
 const Stages: React.FC = () => {
     const selectedService = useSelector((state: RootState) => state.service);
+
+
+
+
 
     return (
         <section className={clsx('pt-[128px]', styles.section)}>
@@ -27,7 +29,7 @@ const Stages: React.FC = () => {
                     <p>6+ НАПРАВЛЕНИЙ</p>
                 </div>
                 <div className={styles.preview}>
-                    <div className={styles.serviceWrap}>
+                    <div className={styles.serviceWrap} >
                         <ServicePopup
                             title="ЛЕНДИНГИ"
                             price="30 000"

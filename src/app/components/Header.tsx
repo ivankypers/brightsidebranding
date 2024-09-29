@@ -5,19 +5,21 @@ import ActionButton from "@/app/components/ActionButton";
 import Image from "next/image";
 
 import gsap from "gsap";
-import { motion } from "framer-motion"
+import {motion, AnimatePresence} from "framer-motion";
 
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setCursorText, setCursorVariant} from "@/redux/slices/CursorSlice";
 
 import styles from '@/app/styles/Header.module.scss'
 import clsx from "clsx";
-import {RootState} from "@/redux/store";
 
 const Header: React.FC = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
     const [headerHeight, setHeaderHeight] = useState(0);
+
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const headerContainer = useRef<HTMLHeadElement>(null)
     const burgerMenu = useRef<HTMLDivElement>(null)
@@ -50,7 +52,6 @@ const Header: React.FC = () => {
                 ease: '0.65, 0, 0.35, 1'
             })
         }
-
     }, []);
 
     const animateBurgerMenu = useCallback((open: boolean) => {
@@ -79,11 +80,16 @@ const Header: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        console.log('Высота при втором эффекте', headerHeight)
+        window.addEventListener('scroll', controlHeader);
+
         if (isBurgerOpen) {
             animateBurgerMenu(true);
         }
-    }, [isBurgerOpen, animateBurgerMenu, headerHeight]);
+
+        return () => {
+            window.removeEventListener('scroll', controlHeader);
+        };
+    }, [isBurgerOpen, animateBurgerMenu, headerHeight, lastScrollY]);
 
     const onMenuClick = () => {
         if (isAnimating) return;
@@ -94,12 +100,34 @@ const Header: React.FC = () => {
         }
     };
 
+    const controlHeader = () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+            // Прокрутка вниз
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+
+        setLastScrollY(currentScrollY);
+    };
+
+    const variants = {
+        hidden: { y: '-100%' },
+        visible: { y: 0 },
+    };
 
     return (
-        <>
-            <header ref={headerContainer} className={styles.header}>
+        <AnimatePresence>
+            <motion.header
+                variants={variants}
+                initial="visible"
+                animate={isVisible ? 'visible' : 'hidden'}
+                ref={headerContainer}
+                className={styles.header}>
                 <div className="container">
-                    <motion.div
+                    <div
                         className={styles.logo}
                     >
                         <Image src="/logo.png" alt="BSbranding" width={41} height={41}/>
@@ -107,10 +135,14 @@ const Header: React.FC = () => {
                             BRIGHTSIDE BRANDING
                         </div>
 
-                    </motion.div>
-                    <button className={clsx(styles.menu, isBurgerOpen && styles.menuActive)} onClick={onMenuClick}>
+                    </div>
+                    <motion.button
+                        initial={{ rotate: 0}}
+                        animate={{ rotate: isBurgerOpen ? 45 : 0 }}
+                        className={clsx(styles.menu, isBurgerOpen && styles.menuActive)}
+                        onClick={onMenuClick}>
                         <span></span>
-                    </button>
+                    </motion.button>
                     <nav className={styles.nav}>
                         <ul className={styles.list}>
                             {
@@ -159,9 +191,9 @@ const Header: React.FC = () => {
                     </div>
 
                 </div>
-            </header>
+            </motion.header>
 
-        </>
+        </AnimatePresence>
     )
 
 }

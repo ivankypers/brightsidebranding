@@ -13,7 +13,6 @@ import Marque from "@/app/components/Marque";
 
 
 import {useDispatch, useSelector} from "react-redux";
-import {setCursorText, setCursorVariant} from "@/redux/slices/CursorSlice";
 import {RootState} from "@/redux/store";
 
 import useMouse from "@react-hook/mouse-position";
@@ -87,7 +86,8 @@ export default function Home() {
             fontSize: "12px",
             x: mouseXPosition - 16,
             y: mouseYPosition - 16
-        }
+        },
+
     };
 
     const spring = {
@@ -96,25 +96,6 @@ export default function Home() {
         damping: 28
     };
 
-    function projectEnter(event: any) {
-        setCursorText("View");
-        setCursorVariant("project");
-    }
-
-    function projectLeave(event: any) {
-        setCursorText("");
-        setCursorVariant("default");
-    }
-
-    function contactEnter(event: any) {
-        setCursorText("👋");
-        setCursorVariant("contact");
-    }
-
-    function contactLeave(event: any) {
-        dispatch(setCursorText(""));
-        dispatch(setCursorVariant("default"));
-    }
 
 
 

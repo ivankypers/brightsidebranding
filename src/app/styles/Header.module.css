@@ -169,11 +169,10 @@
   }
   .menuActive span {
     top: 17px;
-    transform: rotate(-45deg);
   }
   .menuActive span::before {
     top: 0;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
   .menuActive span::after {
     opacity: 0;

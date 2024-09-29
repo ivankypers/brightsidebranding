@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import ActionButton from "@/app/components/ActionButton";
 
+import {motion} from 'framer-motion';
+
 import styles from '@/app/styles/Stages.module.scss'
 import clsx from "clsx";
 
@@ -84,7 +86,7 @@ const Stages: React.FC = () => {
                             alt="Complex"
                             width={1000}
                             height={1000}
-                        />
+                        ></Image>/
                     </div>
                 </div>
             </div>
