@@ -17,8 +17,7 @@ interface ServicePopupProps {
     imageUrl: string;
 }
 
-const ServicePopup: React.FC<ServicePopupProps> = React.memo(
-    ({ className, title, price, deadline, description, imageUrl }) => {
+const ServicePopup: React.FC<ServicePopupProps> = ({className, title, price, deadline, description, imageUrl}) => {
         const [isAccordionOpen, setAccordionOpen] = useState<boolean>(false);
 
         const dispatch = useDispatch();
@@ -29,7 +28,7 @@ const ServicePopup: React.FC<ServicePopupProps> = React.memo(
         const accordionRef = useRef<HTMLDivElement>(null);
 
         const handleClick = useCallback(() => {
-            dispatch(selectService({ title, price, deadline, description, imageUrl }));
+            dispatch(selectService({title, price, deadline, description, imageUrl}));
             dispatch(setOpenItem(openAccordion === title ? null : title));
 
             if (accordionRef.current && titleRef.current) {
@@ -38,7 +37,7 @@ const ServicePopup: React.FC<ServicePopupProps> = React.memo(
 
             setTimeout(() => {
                 if (window.innerWidth < 988 && titleRef.current) {
-                    titleRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    titleRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
                 }
             }, 50);
 
@@ -73,7 +72,6 @@ const ServicePopup: React.FC<ServicePopupProps> = React.memo(
                 </div>
             </>
         );
-    }
-);
+};
 
 export default ServicePopup;
