@@ -13,7 +13,10 @@ import Marque from "@/app/components/Marque";
 
 
 import './styles/Cursor.scss'
-import CustomCursor from "@/app/components/CustomCursor";
+import dynamic from "next/dynamic";
+
+
+const CustomCursor = dynamic(() => import("@/app/components/CustomCursor"), { ssr: false });
 
 
 export default function Home() {
