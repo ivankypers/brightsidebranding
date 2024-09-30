@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 9000;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  width: 25vw;
+  height: 25vh;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  font-family: 'Gothic №60', sans-serif;
+  font-size: 32px;
+}
