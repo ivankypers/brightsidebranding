@@ -1,33 +1,29 @@
-
-import React, { useState, Suspense } from "react";
-import styles from '../styles/Spline.module.scss'
+import React, { useEffect, Suspense } from "react";
+import styles from '../styles/Spline.module.scss';
 const Spline = React.lazy(() => import('@splinetool/react-spline/next'));
 
-import {useSelector, useDispatch} from "react-redux";
-import {setLoaded} from "@/redux/slices/splineSlice";
-
+import {useDispatch, useSelector} from "react-redux";
+import { loadStart, loadProgress, loadEnd } from "@/redux/slices/splineSlice";
+import {RootState} from "@/redux/store";
 
 const SplineModel: React.FC = () => {
+    const isLoading = useSelector((state: RootState) => state.spline.isLoading);
     const dispatch = useDispatch();
-    const isLoading = useSelector((state: any) => state.spline.loaded)
+
+    const handleSplineLoaded = () => {
 
 
+        dispatch(loadEnd())
+    }
 
     return (
-        <>
-            <Suspense fallback={<></>}>
-                <Spline
-                    className={`${styles.model} ${!isLoading ? styles.visible : ''}`}
-                    scene="https://prod.spline.design/qrh5y4oKkagOwex4/scene.splinecode"
-                    onLoad={() => {
-                        setTimeout(() => {
-                            dispatch(setLoaded(false));
-                        }, 4000)
-                    }}
-                />
-            </Suspense>
-        </>
-    )
+
+        <Spline
+            className={`${styles.model} ${!isLoading ? styles.visible : ''}`}
+            scene="https://prod.spline.design/qrh5y4oKkagOwex4/scene.splinecode"
+            onLoad={handleSplineLoaded}
+        />
+    );
 }
 
-export default SplineModel
+export default SplineModel;

@@ -11,7 +11,7 @@ import Service from "@/app/components/sections/Service";
 import Footer from "@/app/components/Footer";
 import Marque from "@/app/components/Marque";
 
-import {motion, AnimatePresence} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 
 import './styles/Cursor.scss'
 import dynamic from "next/dynamic";
@@ -29,10 +29,13 @@ export default function Home() {
 
 
   return (
-      <AnimatePresence>
-          {
-              isLoading && <LoadingScreen />
-          }
+      <>
+          <AnimatePresence>
+              {
+                  isLoading && <LoadingScreen key="loading" />
+              }
+              <CustomCursor/>
+          </AnimatePresence>
           <Header/>
           <Main/>
           <AboutUs/>
@@ -41,8 +44,10 @@ export default function Home() {
           <Service/>
           <Footer/>
           <Marque/>
-          <CustomCursor/>
-      </AnimatePresence>
+
+
+
+      </>
 
   );
 }
