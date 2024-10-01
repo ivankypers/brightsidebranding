@@ -11,7 +11,7 @@ import Service from "@/app/components/sections/Service";
 import Footer from "@/app/components/Footer";
 import Marque from "@/app/components/Marque";
 
-import {motion, AnimatePresence} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 
 import './styles/Cursor.scss'
 import dynamic from "next/dynamic";
