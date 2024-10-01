@@ -1,13 +1,23 @@
 "use client"
 
 import aboutStyles from "@/app/styles/About.module.scss";
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import ProjectCard from "@/app/components/cards/ProjectCard";
 
 import styles from "@/app/styles/Projects.module.scss";
 import clsx from "clsx";
 
+import { ReactLenis, useLenis } from 'lenis/react'
+import {motion, useScroll, useTransform} from "framer-motion";
+
 const ProjectsSection : React.FC = () => {
+    const horizontalRef = useRef<HTMLDivElement>(null);
+    const {scrollYProgress} = useScroll( {
+        target: horizontalRef
+    })
+    
+    const x = useTransform(scrollYProgress, [0,1], ['1%', '-130%']);
+
 
 
     return (
@@ -21,12 +31,20 @@ const ProjectsSection : React.FC = () => {
                     <div className={aboutStyles.subtitle}>[ПОРТФОЛИО]</div>
                     <div className={aboutStyles.description}>Наши работы помогают опередить конкурентов на годы вперед и вывести имидж компании на новый уровень.</div>
                 </div>
-                <div className={styles.projectsWrap}>
-                    <ProjectCard title="DEADCODE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/DEADCODE.png'} />
-                    <ProjectCard title="BRIGHTSIDE" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/bsproj.png'} />
-                    <ProjectCard title="CITIZEN QUEST" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/cqproj.png'} />
-                    <ProjectCard title="NEURO TRAFFIC" type="Многостраничный сайт" stack="Продукт / Услуга" imgUrl={'/uproj.png'} />
-                </div>
+                <motion.div style={{x}} ref={horizontalRef} className={styles.projectsWrap}>
+                    <div className="block sticky top-[100px] z-10">
+                        <div className='flex items-center shrink-0 gap-[32px] w-[200vw]'>
+                            <ProjectCard title="DEADCODE" type="Многостраничный сайт" stack="Продукт / Услуга"
+                                         imgUrl={'/DEADCODE.png'}/>
+                            <ProjectCard title="BRIGHTSIDE" type="Многостраничный сайт" stack="Продукт / Услуга"
+                                         imgUrl={'/bsproj.png'}/>
+                            <ProjectCard title="CITIZEN QUEST" type="Многостраничный сайт" stack="Продукт / Услуга"
+                                         imgUrl={'/cqproj.png'}/>
+                            <ProjectCard title="NEURO TRAFFIC" type="Многостраничный сайт" stack="Продукт / Услуга"
+                                         imgUrl={'/uproj.png'}/>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
             <div className={styles.allprojects}>
                 <div className="container">
