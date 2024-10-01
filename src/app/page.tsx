@@ -29,10 +29,13 @@ export default function Home() {
 
 
   return (
-      <AnimatePresence>
-          {
-              isLoading && <LoadingScreen />
-          }
+      <>
+          <AnimatePresence>
+              {
+                  isLoading && <LoadingScreen key="loading" />
+              }
+              <CustomCursor/>
+          </AnimatePresence>
           <Header/>
           <Main/>
           <AboutUs/>
@@ -41,8 +44,10 @@ export default function Home() {
           <Service/>
           <Footer/>
           <Marque/>
-          <CustomCursor/>
-      </AnimatePresence>
+
+
+
+      </>
 
   );
 }

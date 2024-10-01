@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="fix react memo">
-      <change afterPath="$PROJECT_DIR$/src/app/components/CustomCursor.tsx" afterDir="false" />
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="loading screen added">
+      <change afterPath="$PROJECT_DIR$/src/app/components/AnimatedCounter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/LoadingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/LoadingScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/SplineModel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/SplineModel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Cursor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Cursor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/LoadingScreen.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/LoadingScreen.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/splineSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/splineSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +156,7 @@
       <workItem from="1727617868993" duration="2874000" />
       <workItem from="1727620752388" duration="4584000" />
       <workItem from="1727648716556" duration="3057000" />
+      <workItem from="1727693346167" duration="11112000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -321,7 +326,31 @@
       <option name="project" value="LOCAL" />
       <updated>1727650359885</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix custom cursor">
+      <option name="closed" value="true" />
+      <created>1727694472814</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1727694472814</updated>
+    </task>
+    <task id="LOCAL-00023" summary="dynamic import">
+      <option name="closed" value="true" />
+      <created>1727695109001</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1727695109001</updated>
+    </task>
+    <task id="LOCAL-00024" summary="loading screen added">
+      <option name="closed" value="true" />
+      <created>1727698481414</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1727698481414</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +389,9 @@
     <MESSAGE value="fixed mobile adaptive" />
     <MESSAGE value="model" />
     <MESSAGE value="fix react memo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix react memo" />
+    <MESSAGE value="fix custom cursor" />
+    <MESSAGE value="dynamic import" />
+    <MESSAGE value="loading screen added" />
+    <option name="LAST_COMMIT_MESSAGE" value="loading screen added" />
   </component>
 </project>

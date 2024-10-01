@@ -1,13 +1,15 @@
 "use client"
 
 import React, {useEffect, useRef} from 'react';
+import dynamic from "next/dynamic";
 
 import ActionButton from "@/app/components/ActionButton";
-import SplineModel from "@/app/components/SplineModel";
 import Image from "next/image";
 import gsap from "gsap";
 
 import styles from '@/app/styles/Main.module.scss'
+
+const SplineModel = dynamic(() => import('@/app/components/SplineModel'), {ssr: false})
 
 const Main: React.FC = () => {
 
