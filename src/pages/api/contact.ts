@@ -2,21 +2,32 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import axios from 'axios';
 
-type Data = {
+type ContactFormData = {
+    name: string;
+    emailOrTelegram: string;
     message: string;
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+type ApiResponse = {
+    success: boolean;
+    message: string;
+};
+
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse<ApiResponse>
+) {
     if (req.method !== 'POST') {
-        console.log('метод запрещён')
-        return res.status(405).json({ message: 'Метод не разрешен' });
+        return res.status(405).json({ success: false, message: 'Метод не разрешен' });
     }
 
-    const { name, emailOrTelegram, message } = req.body;
-    console.log('получены данные')
+    const { name, emailOrTelegram, message } = req.body as ContactFormData;
 
     if (!name || !emailOrTelegram || !message) {
-        return res.status(400).json({ message: 'Пожалуйста, заполните все поля.' });
+        return res.status(400).json({
+            success: false,
+            message: 'Пожалуйста, заполните все обязательные поля'
+        });
     }
 
     const notifyByEmail = process.env.NOTIFY_BY_EMAIL === 'true';
@@ -24,25 +35,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     if (!notifyByEmail && !notifyByTelegram) {
         console.warn('Внимание: не настроен ни один метод уведомления');
-        return res.status(500).json({ message: 'Ошибка конфигурации сервера' });
-    }
-
-    const notificationPromises = [];
-
-    if (notifyByEmail) {
-        notificationPromises.push(sendEmail(name, emailOrTelegram, message));
-    }
-
-    if (notifyByTelegram) {
-        notificationPromises.push(sendTelegramMessage(name, emailOrTelegram, message));
+        return res.status(500).json({ success: false, message: 'Ошибка конфигурации сервера' });
     }
 
     try {
+        const notificationPromises = [];
+
+        if (notifyByEmail) {
+            notificationPromises.push(sendEmail(name, emailOrTelegram, message));
+        }
+
+        if (notifyByTelegram) {
+            notificationPromises.push(sendTelegramMessage(name, emailOrTelegram, message));
+        }
+
         await Promise.all(notificationPromises);
-        res.status(200).json({ message: 'Заявка успешно отправлена' });
+
+        res.status(200).json({
+            success: true,
+            message: 'Форма успешно отправлена'
+        });
     } catch (error) {
         console.error('Ошибка при отправке уведомлений:', error);
-        res.status(500).json({ message: 'Ошибка при отправке уведомлений' });
+        res.status(500).json({
+            success: false,
+            message: 'Произошла ошибка при обработке вашего запроса'
+        });
     }
 }
 

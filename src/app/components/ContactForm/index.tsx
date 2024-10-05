@@ -8,9 +8,9 @@ import React, {useState} from "react";
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({
-        name: '',
-        emailOrTelegram: '',
-        message: '',
+        name: '123',
+        emailOrTelegram: '312',
+        message: '312321',
     });
     const [status, setStatus] = useState('');
 
@@ -36,6 +36,7 @@ const ContactForm: React.FC = () => {
                 if (response.ok) {
                     setStatus('Заявка успешно отправлена!');
                     setFormData({ name: '', emailOrTelegram: '', message: '' });
+                    console.log(formData)
                 } else {
                     setStatus(data.message || 'Ошибка при отправке заявки.');
                 }
