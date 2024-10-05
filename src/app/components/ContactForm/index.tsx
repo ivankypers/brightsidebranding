@@ -29,20 +29,26 @@ const ContactForm: React.FC = () => {
                 },
                 body: JSON.stringify(formData),
             });
-            console.log(formData)
 
-            if (response.ok) {
-                setStatus('Заявка успешно отправлена!');
-                setFormData({ name: '', emailOrTelegram: '', message: '' });
-            } else {
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.indexOf("application/json") !== -1) {
                 const data = await response.json();
-                setStatus(data.message || 'Ошибка при отправке заявки.');
+                if (response.ok) {
+                    setStatus('Заявка успешно отправлена!');
+                    setFormData({ name: '', emailOrTelegram: '', message: '' });
+                } else {
+                    setStatus(data.message || 'Ошибка при отправке заявки.');
+                }
+            } else {
+                console.error("Received non-JSON response:", await response.text());
+                setStatus('Ошибка сервера. Пожалуйста, попробуйте позже.');
             }
         } catch (error) {
-            console.error(error);
+            console.error('Error:', error);
             setStatus('Ошибка при отправке заявки.');
         }
     };
+
 
     return (
         <form onSubmit={handleSubmit}>
