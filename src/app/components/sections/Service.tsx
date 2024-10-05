@@ -7,11 +7,11 @@ import styles from '@/app/styles/Service.module.scss'
 import clsx from "clsx"
 
 import Image from "next/image";
-import RequestInput from "@/app/components/RequestInput";
 import ServiceStage from "@/app/components/ServiceStage";
 
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/redux/store";
+import ContactForm from "@/app/components/ContactForm";
 
 
 const Stages: React.FC = () => {
@@ -123,20 +123,7 @@ const Stages: React.FC = () => {
                             height={377}
                         />
                     </div>
-                    <form action="">
-                        <div className={styles.inputs}>
-                            <div className="flex flex-col gap-[24px]">
-                                <RequestInput title="ИМЯ & КОМПАНИЯ" placeholder="JOHN, COMPANY" />
-                                <RequestInput title="EMAIL или TELEGRAM" placeholder="@USERNAME" />
-                            </div>
-                            <div>
-                                <RequestInput title="С ЧЕМ МЫ МОЖЕМ ВАМ ПОМОЧЬ?" placeholder="СОЗДАНИЕ БОТА, ДИЗАЙН И Т.Д." />
-                            </div>
-                        </div>
-                        <div>
-                            <button className={styles.formButton}>ПОЛУЧИТЬ БЕСПЛАТНЫЙ ПЛАН ПРОЕКТА</button>
-                        </div>
-                    </form>
+                    <ContactForm />
                 </div>
             </div>
         </section>
