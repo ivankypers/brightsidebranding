@@ -38,7 +38,25 @@ const Header: React.FC = () => {
     }
 
 
-    const headerLinks = ['О нас', 'Проекты', 'Отзывы', 'Услуги', 'Команда']
+    const headerLinks = [
+        {
+        name: 'О нас',
+        url: 'aboutUs'
+        },
+        {
+            name: 'Проекты',
+            url: 'projects'
+        },
+        {
+            name: 'Этапы',
+            url: 'stages'
+        },
+        {
+            name: 'Услуги',
+            url: 'service'
+        },
+    ]
+
 
     useEffect(() => {
         if (headerContainer.current) {
@@ -52,6 +70,7 @@ const Header: React.FC = () => {
                 ease: '0.65, 0, 0.35, 1'
             })
         }
+
     }, []);
 
     const animateBurgerMenu = useCallback((open: boolean) => {
@@ -118,6 +137,13 @@ const Header: React.FC = () => {
         visible: { y: 0 },
     };
 
+    const scrollToForm = () => {
+        const form = document.getElementById('requestForm');
+        if (form) {
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <AnimatePresence>
             <motion.header
@@ -150,13 +176,13 @@ const Header: React.FC = () => {
                                     <li key={i}
                                         onMouseEnter={linkEnter}
                                         onMouseLeave={linkLeave}
-                                    ><a className={styles.burgerLink} href="">{item}</a></li>
+                                    ><a className={styles.burgerLink} href={`#${item.url}`}>{item.name}</a></li>
                                 ))
                             }
                         </ul>
                     </nav>
 
-                    <ActionButton text="Связаться с нами" onClick={() => alert('k')}/>
+                    <ActionButton text="Связаться с нами" onClick={scrollToForm} />
                 </div>
                 <div ref={burgerMenu} className={styles.burger}>
                     <div className={styles.burgerInner}>
@@ -166,7 +192,7 @@ const Header: React.FC = () => {
                                 <li key={i}
                                     onMouseEnter={linkEnter}
                                     onMouseLeave={linkLeave}
-                                ><a className={styles.burgerLink} href="">{item}</a></li>
+                                ><a className={styles.burgerLink} href={`#${item.url}`}>{item.name}</a></li>
                             ))
                         }
                         </ul>

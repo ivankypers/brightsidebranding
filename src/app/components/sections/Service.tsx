@@ -17,10 +17,6 @@ import ContactForm from "@/app/components/ContactForm";
 const Stages: React.FC = () => {
     const selectedService = useSelector((state: RootState) => state.service);
 
-
-
-
-
     return (
         <section className={clsx('pt-[128px]', styles.section)}>
             <div className="container">

@@ -32,19 +32,26 @@ export default function Home() {
       <>
           <AnimatePresence>
               {
-                  isLoading && <LoadingScreen key="loading" />
+                  isLoading && <LoadingScreen key="loading"/>
               }
               <CustomCursor/>
           </AnimatePresence>
           <Header/>
           <Main/>
-          <AboutUs/>
-          <ProjectsSection/>
-          <Stages/>
-          <Service/>
+          <section id={'aboutUs'}>
+              <AboutUs/>
+          </section>
+          <section id={'projects'}>
+              <ProjectsSection/>
+          </section>
+          <section id={'stages'}>
+              <Stages/>
+          </section>
+          <section id={'service'}>
+              <Service/>
+          </section>
           <Footer/>
           <Marque/>
-
 
 
       </>

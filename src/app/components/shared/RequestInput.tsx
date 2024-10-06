@@ -6,7 +6,7 @@ interface popupProps {
     title?: string,
     placeholder?: string,
     name?: string,
-    value?: string,
+    value?: string | number,
     onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }
 
@@ -17,7 +17,7 @@ const RequestInput: React.FC<popupProps> = ({title, placeholder, name, value, on
             <label className={styles.label} htmlFor="">
                 {title}
             </label>
-            <input className={styles.input} type="text" placeholder={placeholder}/>
+            <input className={styles.input} type="text" name={name} placeholder={placeholder} onChange={onChange} value={value} maxLength={50} />
         </div>
 
     )

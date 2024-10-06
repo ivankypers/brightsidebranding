@@ -41,7 +41,12 @@ const Main: React.FC = () => {
 
     }, []);
 
-
+    const scrollToForm = () => {
+        const form = document.getElementById('requestForm');
+        if (form) {
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
 
     return (
@@ -61,9 +66,7 @@ const Main: React.FC = () => {
                     <ActionButton
                         className={styles.button}
                         text="Бесплатная консультация"
-                        onClick={() => {
-
-                    }}/>
+                        onClick={scrollToForm}/>
                 </div>
                 <div ref={divRef} className={styles.about}>
                     <div className={styles.aboutContent}>

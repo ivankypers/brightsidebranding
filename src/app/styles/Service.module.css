@@ -114,6 +114,16 @@
   font-weight: 400;
   line-height: normal;
 }
+.input:-webkit-autofill {
+  background-color: inherit;
+  color: inherit;
+}
+.input:focus {
+  outline: none;
+}
+.input:focus-visible {
+  border: 2px solid #FF672D;
+}
 
 .textarea {
   display: flex;
@@ -132,6 +142,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.textarea:focus {
+  outline: none;
+}
+.textarea:focus-visible {
+  border: 2px solid #FF672D;
 }
 
 .label {

@@ -1,21 +1,50 @@
 import styles from "@/app/styles/Service.module.scss";
 import RequestInput from "@/app/components/shared/RequestInput";
 import RequestTextarea from "@/app/components/shared/RequestTextarea";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
-
+import {useDispatch, useSelector} from "react-redux";
+import {setName, setMessage, setEmailOrTelegram, resetForm} from "@/redux/slices/RequestsSlice";
+import {RootState} from "@/redux/store";
 
 
 const ContactForm: React.FC = () => {
-    const [formData, setFormData] = useState({
-        name: '123',
-        emailOrTelegram: '312',
-        message: '312321',
-    });
+    const dispatch = useDispatch();
+    const formData = useSelector((state: RootState) => state.requests);
+
+    const [name, setNameLocal] = useState('');
+    const [emailOrTelegram, setEmailOrTelegramLocal] = useState('');
+    const [message, setMessageLocal] = useState('');
+
+
+
     const [status, setStatus] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        switch (name) {
+            case 'name':
+                setNameLocal(value);
+                dispatch(setName(value));
+                break;
+            case 'emailOrTelegram':
+                setEmailOrTelegramLocal(value);
+                dispatch(setEmailOrTelegram(value));
+                break;
+            case 'message':
+                setMessageLocal(value);
+                dispatch(setMessage(value));
+                break;
+            default:
+                break;
+        }
+    };
+
+    const handleReset = () => {
+        dispatch(resetForm());
+        setNameLocal('');
+        setEmailOrTelegramLocal('');
+        setMessageLocal('');
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -35,8 +64,7 @@ const ContactForm: React.FC = () => {
                 const data = await response.json();
                 if (response.ok) {
                     setStatus('Заявка успешно отправлена!');
-                    setFormData({ name: '', emailOrTelegram: '', message: '' });
-                    console.log(formData)
+                    handleReset();
                 } else {
                     setStatus(data.message || 'Ошибка при отправке заявки.');
                 }
@@ -52,21 +80,21 @@ const ContactForm: React.FC = () => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id='requestForm'>
             <div className={styles.inputs}>
                 <div className="flex flex-col gap-[24px]">
                     <RequestInput
                         title="ИМЯ & КОМПАНИЯ"
                         placeholder="JOHN, COMPANY"
                         name="name"
-                        value={formData.name}
+                        value={name}
                         onChange={handleChange}
                     />
                     <RequestInput
                         title="EMAIL или TELEGRAM"
                         placeholder="@USERNAME"
                         name="emailOrTelegram"
-                        value={formData.emailOrTelegram}
+                        value={emailOrTelegram}
                         onChange={handleChange}
                     />
                 </div>
@@ -75,18 +103,18 @@ const ContactForm: React.FC = () => {
                         title="С ЧЕМ МЫ МОЖЕМ ВАМ ПОМОЧЬ?"
                         placeholder="СОЗДАНИЕ БОТА, ДИЗАЙН И Т.Д."
                         name="message"
-                        value={formData.message}
+                        value={message}
                         onChange={handleChange}
                     />
                 </div>
             </div>
             <div>
                 <button type="submit" className={styles.formButton}>
-                    ПОЛУЧИТЬ БЕСПЛАТНЫЙ ПЛАН ПРОЕКТА
+                    {status ? `${status}` : ' ПОЛУЧИТЬ БЕСПЛАТНЫЙ ПЛАН ПРОЕКТА'}
                 </button>
             </div>
-            {status && <p>{status}</p>}
         </form>
+
     )
 }
 

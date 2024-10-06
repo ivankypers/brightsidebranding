@@ -6,7 +6,7 @@ interface popupProps {
     title?: string,
     placeholder?: string,
     name?: string,
-    value?: string,
+    value?: string | number,
     onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }
 
@@ -17,7 +17,7 @@ const RequestTextarea: React.FC<popupProps> = ({title, placeholder, name, value,
             <label className={styles.label} htmlFor="">
                 {title}
             </label>
-            <textarea className={styles.textarea} placeholder={placeholder}/>
+            <textarea className={styles.textarea} placeholder={placeholder} name={name} onChange={onChange} value={value} maxLength={500} />
         </div>
 
     )

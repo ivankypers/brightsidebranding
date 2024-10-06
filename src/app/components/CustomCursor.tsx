@@ -10,10 +10,6 @@ import '@/app/styles/Cursor.scss';
 const CustomCursor = () => {
     const { cursorVariant, cursorText } = useSelector((state: RootState) => state.cursor);
 
-    useEffect(() => {
-
-    }, []);
-
     const mouse = useMouse(document.body, {
         enterDelay: 100,
         leaveDelay: 100,

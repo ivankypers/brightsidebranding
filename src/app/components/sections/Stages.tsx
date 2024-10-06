@@ -12,6 +12,13 @@ import clsx from "clsx";
 
 const Stages: React.FC = () => {
 
+    const scrollToForm = () => {
+        const form = document.getElementById('requestForm');
+        if (form) {
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className={styles.section}>
             <div className="container">
@@ -69,7 +76,7 @@ const Stages: React.FC = () => {
                         <h2 className={styles.title}>ПЕРВАЯ СТРАНИЦА ТВОЕГО ПРОЕКТА <span>БЕСПЛАТНО</span></h2>
                         <p className={styles.offerDsc}>Ответьте на несколько вопросов и учавствуйте в акции!</p>
                         <div>
-                            <ActionButton className={styles.actionButton} text="Пройти опрос" onClick={() => {}}/>
+                            <ActionButton className={styles.actionButton} text="Пройти опрос" onClick={scrollToForm}/>
                         </div>
                     </div>
                     <div className={clsx('relative', styles.imageBlock)}>
