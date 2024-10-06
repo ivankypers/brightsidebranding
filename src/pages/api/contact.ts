@@ -30,20 +30,15 @@ export default async function handler(
         });
     }
 
-    const notifyByEmail = process.env.NOTIFY_BY_EMAIL === 'true';
     const notifyByTelegram = process.env.NOTIFY_BY_TELEGRAM === 'true';
 
-    if (!notifyByEmail && !notifyByTelegram) {
+    if (!notifyByTelegram) {
         console.warn('Внимание: не настроен ни один метод уведомления');
         return res.status(500).json({ success: false, message: 'Ошибка конфигурации сервера' });
     }
 
     try {
         const notificationPromises = [];
-
-        if (notifyByEmail) {
-            notificationPromises.push(sendEmail(name, emailOrTelegram, message));
-        }
 
         if (notifyByTelegram) {
             notificationPromises.push(sendTelegramMessage(name, emailOrTelegram, message));
