@@ -68,6 +68,20 @@ const CustomCursor = () => {
                 type: "spring",
                 mass: 0.6
             }
+        },
+        service: {
+            opacity: 1,
+            height: 64,
+            width: 64,
+            fontSize: "16px",
+            backgroundColor: "#fff",
+            color: "#000",
+            x: mouseXPosition - 30,
+            y: mouseYPosition - 30,
+            transition: {
+                type: "spring",
+                mass: 0.6
+            }
         }
 
     };

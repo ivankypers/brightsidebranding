@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="fx">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="Отправка формы в бота + ссылки на кнопки" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="features" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -362,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727813478710</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Отправка формы в бота + ссылки на кнопки">
+      <option name="closed" value="true" />
+      <created>1728224024491</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1728224024491</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,8 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Вёрстку пописал, разбил кое-что на компоненты" />
-    <MESSAGE value="Сделал все секции добавил редукс, накинул его на сервис и прокинул пропсы чтоб услуги появлялись" />
     <MESSAGE value="gsap приколы" />
     <MESSAGE value="Анимации в main tsx" />
     <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
@@ -405,6 +414,8 @@
     <MESSAGE value="loading screen added" />
     <MESSAGE value="loading screen reworked" />
     <MESSAGE value="fx" />
-    <option name="LAST_COMMIT_MESSAGE" value="fx" />
+    <MESSAGE value="заявки в бота тг" />
+    <MESSAGE value="Отправка формы в бота + ссылки на кнопки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Отправка формы в бота + ссылки на кнопки" />
   </component>
 </project>

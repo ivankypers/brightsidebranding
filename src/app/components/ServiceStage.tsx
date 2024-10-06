@@ -49,15 +49,15 @@ const ServiceStage: React.FC<popupProps> = ({title, price, deadline, description
                 </div>
                 <div className={styles.overflowh}>
                     <div className={styles.description}>
-                        <span ref={priceRef} className={styles.info}>от {price} ₽</span>
-                        <span ref={deadlineRef} className={styles.info}>от {deadline} дней</span>
+                        <span ref={priceRef} className={styles.info}>от <b>{price}</b>  ₽</span>
+                        <span ref={deadlineRef} className={styles.info}>от <b>{deadline}</b>  дней</span>
                     </div>
                 </div>
                 <div className={styles.overflowh}>
-                    <p ref={descriptionRef} className={styles.stage}>{description}</p>
+                    <p ref={descriptionRef} className={styles.stage}><pre className={styles.pre}>{description}</pre></p>
                 </div>
                 <div ref={imageWrapRef} className={styles.imageWrapper}>
-                    <Image ref={imageRef} className={styles.image} src={imageUrl} alt="landing" width={561} height={525}/>
+                    <Image ref={imageRef} className={styles.image} src={imageUrl} alt="landing" width={561} height={525} placeholder={'empty'} />
                 </div>
 
             </div>

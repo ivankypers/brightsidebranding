@@ -98,11 +98,27 @@ const Header: React.FC = () => {
         }
     }, []);
 
+    const closeBurgerMenuAnim = useCallback(() => {
+        if (burgerMenu.current) {
+            setIsAnimating(true);
+                gsap.to(burgerMenu.current, {
+                    height: '0',
+                    duration: 0.01,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        setIsAnimating(false);
+                        setIsBurgerOpen(false);
+                    }
+                });
+            }
+    }, []);
+
     useEffect(() => {
         window.addEventListener('scroll', controlHeader);
 
         if (isBurgerOpen) {
             animateBurgerMenu(true);
+
         }
 
         return () => {
@@ -114,8 +130,12 @@ const Header: React.FC = () => {
         if (isAnimating) return;
         if (isBurgerOpen) {
             animateBurgerMenu(false);
+            document.body.style.overflow = 'auto'
+
         } else {
             setIsBurgerOpen(true);
+            document.body.style.overflow = 'hidden'
+
         }
     };
 
@@ -143,6 +163,11 @@ const Header: React.FC = () => {
             form.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
+    const onClickLink = () => {
+        closeBurgerMenuAnim();
+        document.body.style.overflow = 'auto'
+    }
 
     return (
         <AnimatePresence>
@@ -192,7 +217,7 @@ const Header: React.FC = () => {
                                 <li key={i}
                                     onMouseEnter={linkEnter}
                                     onMouseLeave={linkLeave}
-                                ><a className={styles.burgerLink} href={`#${item.url}`}>{item.name}</a></li>
+                                ><a className={styles.burgerLink} onClick={onClickLink} href={`#${item.url}`}>{item.name}</a></li>
                             ))
                         }
                         </ul>
