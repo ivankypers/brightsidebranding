@@ -75,9 +75,7 @@ const Main: React.FC = () => {
                             проект на новый уровень</h2>
                         <h3 className={styles.types}>Многостраничные сайты | Интернет-магазины | Соц. сети | Лендинги |
                             Фирменный стиль | Презентации</h3>
-                        <ActionButton className={styles.adaptiveButton} text="Бесплатная консультация" onClick={() => {
-                            alert('oy')
-                        }}/>
+                        <ActionButton className={styles.adaptiveButton} text="Бесплатная консультация" onClick={scrollToForm}/>
                     </div>
                 </div>
             </div>

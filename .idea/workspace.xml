@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="Отправка формы в бота + ссылки на кнопки" />
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="общие визуальные фиксы">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/CustomCursor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/CustomCursor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,6 +160,10 @@
       <workItem from="1727693346167" duration="11112000" />
       <workItem from="1727775808702" duration="5209000" />
       <workItem from="1727950040807" duration="1572000" />
+      <workItem from="1728225925370" duration="5979000" />
+      <workItem from="1728406227081" duration="1207000" />
+      <workItem from="1729430072262" duration="337000" />
+      <workItem from="1729434721262" duration="978000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -373,7 +381,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728224024491</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="фикс отправки данных">
+      <option name="closed" value="true" />
+      <created>1728226105297</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1728226105297</updated>
+    </task>
+    <task id="LOCAL-00029" summary="общие визуальные фиксы">
+      <option name="closed" value="true" />
+      <created>1728251282349</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1728251282349</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,8 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gsap приколы" />
-    <MESSAGE value="Анимации в main tsx" />
     <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
     <MESSAGE value="Добавил адаптивы и новые компоненты" />
     <MESSAGE value="export некста" />
@@ -416,6 +438,8 @@
     <MESSAGE value="fx" />
     <MESSAGE value="заявки в бота тг" />
     <MESSAGE value="Отправка формы в бота + ссылки на кнопки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отправка формы в бота + ссылки на кнопки" />
+    <MESSAGE value="фикс отправки данных" />
+    <MESSAGE value="общие визуальные фиксы" />
+    <option name="LAST_COMMIT_MESSAGE" value="общие визуальные фиксы" />
   </component>
 </project>
