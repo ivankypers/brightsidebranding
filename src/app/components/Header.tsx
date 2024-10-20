@@ -38,7 +38,25 @@ const Header: React.FC = () => {
     }
 
 
-    const headerLinks = ['О нас', 'Проекты', 'Отзывы', 'Услуги', 'Команда']
+    const headerLinks = [
+        {
+        name: 'О нас',
+        url: 'aboutUs'
+        },
+        {
+            name: 'Проекты',
+            url: 'projects'
+        },
+        {
+            name: 'Этапы',
+            url: 'stages'
+        },
+        {
+            name: 'Услуги',
+            url: 'service'
+        },
+    ]
+
 
     useEffect(() => {
         if (headerContainer.current) {
@@ -52,6 +70,7 @@ const Header: React.FC = () => {
                 ease: '0.65, 0, 0.35, 1'
             })
         }
+
     }, []);
 
     const animateBurgerMenu = useCallback((open: boolean) => {
@@ -79,11 +98,27 @@ const Header: React.FC = () => {
         }
     }, []);
 
+    const closeBurgerMenuAnim = useCallback(() => {
+        if (burgerMenu.current) {
+            setIsAnimating(true);
+                gsap.to(burgerMenu.current, {
+                    height: '0',
+                    duration: 0.01,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        setIsAnimating(false);
+                        setIsBurgerOpen(false);
+                    }
+                });
+            }
+    }, []);
+
     useEffect(() => {
         window.addEventListener('scroll', controlHeader);
 
         if (isBurgerOpen) {
             animateBurgerMenu(true);
+
         }
 
         return () => {
@@ -95,8 +130,12 @@ const Header: React.FC = () => {
         if (isAnimating) return;
         if (isBurgerOpen) {
             animateBurgerMenu(false);
+            document.body.style.overflow = 'auto'
+
         } else {
             setIsBurgerOpen(true);
+            document.body.style.overflow = 'hidden'
+
         }
     };
 
@@ -117,6 +156,18 @@ const Header: React.FC = () => {
         hidden: { y: '-100%' },
         visible: { y: 0 },
     };
+
+    const scrollToForm = () => {
+        const form = document.getElementById('requestForm');
+        if (form) {
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const onClickLink = () => {
+        closeBurgerMenuAnim();
+        document.body.style.overflow = 'auto'
+    }
 
     return (
         <AnimatePresence>
@@ -150,13 +201,13 @@ const Header: React.FC = () => {
                                     <li key={i}
                                         onMouseEnter={linkEnter}
                                         onMouseLeave={linkLeave}
-                                    ><a className={styles.burgerLink} href="">{item}</a></li>
+                                    ><a className={styles.burgerLink} href={`#${item.url}`}>{item.name}</a></li>
                                 ))
                             }
                         </ul>
                     </nav>
 
-                    <ActionButton text="Связаться с нами" onClick={() => alert('k')}/>
+                    <ActionButton text="Связаться с нами" onClick={scrollToForm} />
                 </div>
                 <div ref={burgerMenu} className={styles.burger}>
                     <div className={styles.burgerInner}>
@@ -166,7 +217,7 @@ const Header: React.FC = () => {
                                 <li key={i}
                                     onMouseEnter={linkEnter}
                                     onMouseLeave={linkLeave}
-                                ><a className={styles.burgerLink} href="">{item}</a></li>
+                                ><a className={styles.burgerLink} onClick={onClickLink} href={`#${item.url}`}>{item.name}</a></li>
                             ))
                         }
                         </ul>

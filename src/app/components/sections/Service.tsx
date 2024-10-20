@@ -7,19 +7,17 @@ import styles from '@/app/styles/Service.module.scss'
 import clsx from "clsx"
 
 import Image from "next/image";
-import RequestInput from "@/app/components/RequestInput";
 import ServiceStage from "@/app/components/ServiceStage";
 
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/redux/store";
 
 
+import ContactForm from "@/app/components/ContactForm";
+
+
 const Stages: React.FC = () => {
     const selectedService = useSelector((state: RootState) => state.service);
-
-
-
-
 
     return (
         <section className={clsx('pt-[128px]', styles.section)}>
@@ -33,44 +31,46 @@ const Stages: React.FC = () => {
                         <ServicePopup
                             title="ЛЕНДИНГИ"
                             price="30 000"
-                            deadline="30"
-                            description="Описание для лендингов"
+                            deadline="15"
+                            description="Одностраничный сайт, созданный для привлечения и конверсии посетителей в клиентов.
+                            Идеально подходит для рекламных кампаний, продвижения продукта или услуги."
                             imageUrl="/landing.png"
                         />
                         <ServicePopup
                             title="МНОГОСТРАНИЧНЫЕ САЙТЫ"
-                            price="40 000"
-                            deadline="40"
-                            description="Описание для многостраничных сайтов"
+                            price="80 000"
+                            deadline="30"
+                            description="Полноценный веб-ресурс с несколькими страницами, позволяющий детально представить ваш бизнес, услуги и продукты. Идеален для компаний, стремящихся обеспечить пользователей полной информацией и улучшить взаимодействие с клиентами."
                             imageUrl="/multipage.png"
                         />
                         <ServicePopup
                             title="ИНТЕРНЕТ-МАГАЗИНЫ"
-                            price="80 000"
+                            price="100 000"
                             deadline="40"
-                            description="Описание для многостраничных сайтов"
+                            description="Онлайн-платформа для продажи ваших товаров и услуг круглосуточно, без географических ограничений. Он позволяет расширить клиентскую базу, увеличить продажи и повысить узнаваемость вашего бренда."
                             imageUrl="/webstore.png"
                         />
                         <ServicePopup
                             title="ФИРМЕННЫЙ СТИЛЬ"
-                            price="80 000"
-                            deadline="40"
-                            description="Описание для многостраничных сайтов"
+                            price="20 000"
+                            deadline="15"
+                            description="Комплекс визуальных и смысловых элементов, которые отражают индивидуальность вашего бизнеса и создают узнаваемый образ на рынке. Он помогает установить доверие с клиентами, выделиться среди конкурентов и эффективно передать ценности вашей компании."
                             imageUrl="/servicestyle.png"
                         />
                         <ServicePopup
                             title="ДИЗАЙН ПРЕЗЕНТАЦИИ"
                             price="80 000"
                             deadline="40"
-                            description="Описание для многостраничных сайтов"
+                            description="Создание профессиональных и визуально привлекательных слайдов, которые эффективно передают вашу идею и удерживают внимание аудитории. Хорошо оформленная презентация помогает выделиться, улучшить восприятие информации и повысить шансы на успех ваших проектов."
                             imageUrl="/presentationdesign.png"
                         />
                         <ServicePopup
                             title="УПАКОВКА СОЦ. СЕТЕЙ"
-                            price="80 000"
+                            price="10 000"
                             deadline="40"
-                            description="Описание для многостраничных сайтов"
+                            description="Комплексный подход к дизайну ваших аккаунтов в социальных сетях, который включает создание уникальных визуальных элементов, согласованных с вашим брендом. Это помогает привлечь внимание, удержать аудиторию и повысить взаимодействие с клиентами."
                             imageUrl="/socialdesign.png"
+
                         />
 
                     </div>
@@ -99,7 +99,6 @@ const Stages: React.FC = () => {
                             скачать прайс лист
                         </a>
                     </div>
-
                 </div>
 
                 <div className={styles.bannerWrap}>
@@ -123,20 +122,7 @@ const Stages: React.FC = () => {
                             height={377}
                         />
                     </div>
-                    <form action="">
-                        <div className={styles.inputs}>
-                            <div className="flex flex-col gap-[24px]">
-                                <RequestInput title="ИМЯ & КОМПАНИЯ" placeholder="JOHN, COMPANY" />
-                                <RequestInput title="EMAIL или TELEGRAM" placeholder="@USERNAME" />
-                            </div>
-                            <div>
-                                <RequestInput title="С ЧЕМ МЫ МОЖЕМ ВАМ ПОМОЧЬ?" placeholder="СОЗДАНИЕ БОТА, ДИЗАЙН И Т.Д." />
-                            </div>
-                        </div>
-                        <div>
-                            <button className={styles.formButton}>ПОЛУЧИТЬ БЕСПЛАТНЫЙ ПЛАН ПРОЕКТА</button>
-                        </div>
-                    </form>
+                    <ContactForm />
                 </div>
             </div>
         </section>

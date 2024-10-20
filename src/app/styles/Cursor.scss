@@ -1,4 +1,5 @@
 .circle {
+  opacity: 0;
   position: fixed;
   display: flex;
   flex-flow: row;
@@ -6,8 +7,8 @@
   justify-content: center;
   top: 0;
   left: 0;
-  height: 12px;
-  width: 12px;
+  height: 24px;
+  width: 24px;
   background-color: #FF672D;
   border-radius: 200px;
   pointer-events: none;

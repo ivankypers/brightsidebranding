@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="loading screen reworked">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/cards/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/cards/ProjectCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sections/ProjectsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sections/ProjectsSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Projects.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Projects.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Projects.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Projects.module.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/Projects.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/Projects.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/splineSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/splineSlice.ts" afterDir="false" />
-    </list>
+    <list default="true" id="c99b71f9-aff6-4f6d-84ab-ccac1a4c407c" name="Changes" comment="Отправка формы в бота + ссылки на кнопки" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="features" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -159,6 +155,7 @@
       <workItem from="1727648716556" duration="3057000" />
       <workItem from="1727693346167" duration="11112000" />
       <workItem from="1727775808702" duration="5209000" />
+      <workItem from="1727950040807" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit again">
       <option name="closed" value="true" />
@@ -360,7 +357,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727776030949</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fx">
+      <option name="closed" value="true" />
+      <created>1727813478710</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1727813478710</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Отправка формы в бота + ссылки на кнопки">
+      <option name="closed" value="true" />
+      <created>1728224024491</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1728224024491</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,9 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit again" />
-    <MESSAGE value="Вёрстку пописал, разбил кое-что на компоненты" />
-    <MESSAGE value="Сделал все секции добавил редукс, накинул его на сервис и прокинул пропсы чтоб услуги появлялись" />
     <MESSAGE value="gsap приколы" />
     <MESSAGE value="Анимации в main tsx" />
     <MESSAGE value="lazy loading для spline модели и база для аккордиона услуг в мобилке" />
@@ -403,6 +413,9 @@
     <MESSAGE value="dynamic import" />
     <MESSAGE value="loading screen added" />
     <MESSAGE value="loading screen reworked" />
-    <option name="LAST_COMMIT_MESSAGE" value="loading screen reworked" />
+    <MESSAGE value="fx" />
+    <MESSAGE value="заявки в бота тг" />
+    <MESSAGE value="Отправка формы в бота + ссылки на кнопки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Отправка формы в бота + ссылки на кнопки" />
   </component>
 </project>

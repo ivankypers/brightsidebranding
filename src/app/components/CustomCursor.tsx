@@ -10,10 +10,6 @@ import '@/app/styles/Cursor.scss';
 const CustomCursor = () => {
     const { cursorVariant, cursorText } = useSelector((state: RootState) => state.cursor);
 
-    useEffect(() => {
-
-    }, []);
-
     const mouse = useMouse(document.body, {
         enterDelay: 100,
         leaveDelay: 100,
@@ -35,25 +31,25 @@ const CustomCursor = () => {
     const variants = {
         default: {
             opacity: 1,
-            height: 12,
-            width: 12,
+            height: 24,
+            width: 24,
             fontSize: "16px",
             backgroundColor: "#FF672D",
-            x: mouseXPosition,
-            y: mouseYPosition,
+            x: mouseXPosition - 6,
+            y: mouseYPosition - 8,
             transition: {
                 type: "spring",
-                mass: 0.6
+                mass: .2
             }
         },
         contact: {
             opacity: 1,
-            height: 64,
-            width: 64,
-            fontSize: "24px",
+            height: 96,
+            width: 96,
+            fontSize: "32px",
             backgroundColor: "#fff",
-            x: mouseXPosition - 30,
-            y: mouseYPosition - 30,
+            x: mouseXPosition - 46,
+            y: mouseYPosition - 46,
             transition: {
                 type: "spring",
                 mass: 0.6
@@ -68,6 +64,20 @@ const CustomCursor = () => {
             color: "#000",
             x: mouseXPosition - 14,
             y: mouseYPosition - 14,
+            transition: {
+                type: "spring",
+                mass: 0.6
+            }
+        },
+        service: {
+            opacity: 1,
+            height: 64,
+            width: 64,
+            fontSize: "16px",
+            backgroundColor: "#fff",
+            color: "#000",
+            x: mouseXPosition - 30,
+            y: mouseYPosition - 30,
             transition: {
                 type: "spring",
                 mass: 0.6
