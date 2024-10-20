@@ -1,6 +1,6 @@
 // components/CustomCursor.jsx
 "use client";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import useMouse from "@react-hook/mouse-position";
@@ -9,6 +9,7 @@ import '@/app/styles/Cursor.scss';
 
 const CustomCursor = () => {
     const { cursorVariant, cursorText } = useSelector((state: RootState) => state.cursor);
+
 
     const mouse = useMouse(document.body, {
         enterDelay: 100,
@@ -20,15 +21,23 @@ const CustomCursor = () => {
 
     if (mouse.x !== null) {
         mouseXPosition = (mouse.clientX ?? 0) - 8;
+    } else {
+        mouseXPosition = -100;
     }
 
     if (mouse.y !== null) {
         mouseYPosition = (mouse.clientY ?? 0) - 8;
+    } else {
+        mouseYPosition = -100;
     }
 
 
 
+
     const variants = {
+        inactive: {
+            opacity: 0,
+        },
         default: {
             opacity: 1,
             height: 24,
@@ -91,6 +100,7 @@ const CustomCursor = () => {
         stiffness: 500,
         damping: 28
     };
+
 
     return (
 
